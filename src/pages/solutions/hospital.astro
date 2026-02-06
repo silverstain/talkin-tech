@@ -1,0 +1,355 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="MediFlow Hospital Management System (HMS)">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #059669, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Tech Grid */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html {
+      scroll-padding-top: 100px;
+    }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        ICD-10 Compliant • SHIF/NHIF Integrated • Level 4 Ready
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        The Paperless <br />
+        <span class="text-gradient">Smart Hospital.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-4xl mx-auto">
+        A complete HMS managing the entire patient journey: <strong>Triage, Doctor's Notes, Pharmacy Inventory, Lab Results, and Insurance Billing</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#journey" class="bg-emerald-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-600/30">
+          View Patient Flow
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
+          Download Brochure
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900">Wait Times</div><div class="text-xs text-slate-500 uppercase">Reduced by 40%</div></div>
+        <div><div class="font-bold text-slate-900">Pharmacy</div><div class="text-xs text-slate-500 uppercase">Zero Pilferage</div></div>
+        <div><div class="font-bold text-slate-900">Billing</div><div class="text-xs text-slate-500 uppercase">Automated Invoicing</div></div>
+        <div><div class="font-bold text-slate-900">Records</div><div class="text-xs text-slate-500 uppercase">100% Digital</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/90 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#journey" class="hover:text-emerald-600 transition-colors">Patient Journey</a>
+      <a href="#clinical" class="hover:text-emerald-600 transition-colors">Clinical (EMR)</a>
+      <a href="#pharmacy" class="hover:text-emerald-600 transition-colors">Pharmacy & Lab</a>
+      <a href="#billing" class="hover:text-emerald-600 transition-colors">Billing & Insurance</a>
+      <a href="#inpatient" class="hover:text-emerald-600 transition-colors">Inpatient</a>
+    </div>
+  </div>
+
+  <section id="journey" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Optimized Patient Flow</h2>
+        <p class="text-slate-500 text-lg">See how MediFlow streamlines every step of the visit.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-4 relative">
+        <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-slate-100 -z-10"></div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:border-emerald-300 transition-all">
+          <div class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto group-hover:bg-emerald-600 transition-colors">1</div>
+          <h3 class="text-lg font-bold text-center mb-2">Reception</h3>
+          <p class="text-center text-xs text-slate-500">Patient check-in. Biometric search. Insurance validation (Biometric/Smart Card).</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:border-emerald-300 transition-all">
+          <div class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto group-hover:bg-emerald-600 transition-colors">2</div>
+          <h3 class="text-lg font-bold text-center mb-2">Triage</h3>
+          <p class="text-center text-xs text-slate-500">Nurse captures Vitals (BP, Temp, BMI). Auto-calculates BMI. Queue prioritization.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:border-emerald-300 transition-all">
+          <div class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto group-hover:bg-emerald-600 transition-colors">3</div>
+          <h3 class="text-lg font-bold text-center mb-2">Consultation</h3>
+          <p class="text-center text-xs text-slate-500">Doctor views history, diagnoses (ICD-10), and orders Lab/Pharm requests digitally.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:border-emerald-300 transition-all">
+          <div class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto group-hover:bg-emerald-600 transition-colors">4</div>
+          <h3 class="text-lg font-bold text-center mb-2">Service & Billing</h3>
+          <p class="text-center text-xs text-slate-500">Patient collects drugs/tests. Invoice is auto-generated. Claim sent to insurer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="clinical" class="py-24 px-6 bg-emerald-50/50 border-b border-emerald-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="order-2 lg:order-1">
+        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl mb-6">🩺</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Doctor's Workbench (EMR)</h2>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          A powerful interface designed for speed. Doctors can access a patient's entire medical history in one click, ensuring better diagnosis and continuity of care.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="mt-1 w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">✓</span>
+            <div>
+              <strong class="text-slate-900">ICD-10 Coding</strong>
+              <p class="text-sm text-slate-500">Standardized disease coding for insurance compliance.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">✓</span>
+            <div>
+              <strong class="text-slate-900">Historical Vitals & Trends</strong>
+              <p class="text-sm text-slate-500">View graphs of BP, Sugar, and Weight over the last 10 visits.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">✓</span>
+            <div>
+              <strong class="text-slate-900">CPOE (Order Entry)</strong>
+              <p class="text-sm text-slate-500">Digital prescription sends request directly to Pharmacy (no paper scripts).</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="order-1 lg:order-2 bg-white rounded-3xl p-2 shadow-xl border border-emerald-100">
+         <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+            <div class="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
+               <div>
+                 <div class="text-xl font-bold text-slate-900">Patient: Mary Wanjiku</div>
+                 <div class="text-xs text-slate-500">OP Number: 22019 • Age: 34 • Allergies: <span class="text-red-500 font-bold">Penicillin</span></div>
+               </div>
+               <div class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-xs font-bold">Insurance: NHIF</div>
+            </div>
+            <div class="grid grid-cols-4 gap-4 mb-6">
+               <div class="bg-white p-3 rounded-lg border border-slate-200 text-center">
+                 <div class="text-[10px] text-slate-400 uppercase">BP</div>
+                 <div class="font-bold text-slate-900">120/80</div>
+               </div>
+               <div class="bg-white p-3 rounded-lg border border-slate-200 text-center">
+                 <div class="text-[10px] text-slate-400 uppercase">Temp</div>
+                 <div class="font-bold text-slate-900">36.5°C</div>
+               </div>
+               <div class="bg-white p-3 rounded-lg border border-slate-200 text-center">
+                 <div class="text-[10px] text-slate-400 uppercase">Pulse</div>
+                 <div class="font-bold text-slate-900">72</div>
+               </div>
+               <div class="bg-white p-3 rounded-lg border border-slate-200 text-center">
+                 <div class="text-[10px] text-slate-400 uppercase">SPO2</div>
+                 <div class="font-bold text-slate-900">98%</div>
+               </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200 mb-4">
+               <div class="text-xs font-bold text-slate-400 uppercase mb-2">Diagnosis (ICD-10)</div>
+               <div class="flex gap-2">
+                 <span class="bg-slate-100 px-2 py-1 rounded text-xs text-slate-700 font-bold">J00 - Acute Nasopharyngitis</span>
+                 <span class="bg-slate-100 px-2 py-1 rounded text-xs text-slate-700 font-bold">R50 - Fever</span>
+               </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200">
+               <div class="text-xs font-bold text-slate-400 uppercase mb-2">Prescription</div>
+               <div class="text-sm text-slate-700 border-b border-slate-100 pb-2 mb-2 flex justify-between">
+                 <span>Paracetamol 500mg</span>
+                 <span>2 x 3 (5 Days)</span>
+               </div>
+               <div class="text-sm text-slate-700 flex justify-between">
+                 <span>Amoxicillin 500mg</span>
+                 <span>1 x 3 (7 Days)</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="pharmacy" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="grid md:grid-cols-2 gap-12">
+        
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+           <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+             <span class="text-3xl">💊</span> Pharmacy & Inventory
+           </h3>
+           <p class="text-slate-500 mb-6">Stop pilferage and revenue leakage. Track every tablet from procurement to dispensing.</p>
+           <ul class="space-y-4 text-sm text-slate-600">
+             <li class="flex gap-3">
+               <span class="font-bold text-slate-900 w-24">Expiry Tracking:</span>
+               <span>First-In-First-Out (FIFO) logic ensures old stock is sold first. Alerts for expiring drugs.</span>
+             </li>
+             <li class="flex gap-3">
+               <span class="font-bold text-slate-900 w-24">Stock Levels:</span>
+               <span>Auto-generate LPO when stock hits re-order level.</span>
+             </li>
+             <li class="flex gap-3">
+               <span class="font-bold text-slate-900 w-24">Dispensing:</span>
+               <span>Only dispense paid items (Cash/Insurance authorized).</span>
+             </li>
+           </ul>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+           <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+             <span class="text-3xl">🔬</span> Laboratory
+           </h3>
+           <p class="text-slate-500 mb-6">Streamline the flow from sample collection to results verification.</p>
+           <ul class="space-y-4 text-sm text-slate-600">
+             <li class="flex gap-3">
+               <span class="font-bold text-slate-900 w-24">Requests:</span>
+               <span>Receive digital requests from Doctor immediately. No paper slips.</span>
+             </li>
+             <li class="flex gap-3">
+               <span class="font-bold text-slate-900 w-24">Results:</span>
+               <span>Enter results with reference ranges (High/Low flags).</span>
+             </li>
+             <li class="flex gap-3">
+               <span class="font-bold text-slate-900 w-24">Approval:</span>
+               <span>Senior Lab Tech must approve results before Doctor can view them.</span>
+             </li>
+           </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="billing" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <h2 class="text-3xl font-bold text-white mb-6">Smart Billing Engine</h2>
+        <p class="text-slate-400 mb-8 text-lg">
+          Handle Cash, M-Pesa, and Insurance Copay seamlessly. Reduce claim rejections with automated limits checking.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-green-500/20 text-green-400 rounded-lg flex items-center justify-center text-xl flex-shrink-0">💳</div>
+             <div>
+               <h4 class="font-bold text-white">Insurance Management</h4>
+               <p class="text-sm text-slate-400">Manage Price Lists per insurer (Jubilee, AAR, NHIF). System auto-picks the correct price.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📑</div>
+             <div>
+               <h4 class="font-bold text-white">Claim Generation</h4>
+               <p class="text-sm text-slate-400">One-click generation of invoices and claim forms (smart PDF) at discharge.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-purple-500/20 text-purple-400 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📲</div>
+             <div>
+               <h4 class="font-bold text-white">M-Pesa Integration</h4>
+               <p class="text-sm text-slate-400">Auto-receipting for cash patients. Push STK prompts to patient phones.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="lg:col-span-7">
+        <div class="bg-slate-800 rounded-3xl p-8 border border-slate-700">
+           <h4 class="text-emerald-400 font-bold uppercase tracking-widest text-xs mb-6">Billing Workflow</h4>
+           <div class="space-y-4">
+             <div class="flex items-center gap-4">
+               <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center font-bold text-sm">1</div>
+               <div class="bg-slate-700/50 p-3 rounded-lg flex-1 border border-slate-600">
+                 <div class="font-bold text-sm">Service Consumed</div>
+                 <div class="text-xs text-slate-400">Lab Test ordered by Doctor</div>
+               </div>
+             </div>
+             <div class="flex items-center gap-4">
+               <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center font-bold text-sm">2</div>
+               <div class="bg-slate-700/50 p-3 rounded-lg flex-1 border border-slate-600">
+                 <div class="font-bold text-sm">Limit Check</div>
+                 <div class="text-xs text-slate-400">System checks Insurance Limit & Exclusions</div>
+               </div>
+             </div>
+             <div class="flex items-center gap-4">
+               <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center font-bold text-sm">3</div>
+               <div class="bg-slate-700/50 p-3 rounded-lg flex-1 border border-slate-600">
+                 <div class="font-bold text-sm">Interim Bill</div>
+                 <div class="text-xs text-slate-400">Cost added to patient bill (Pre-authorized)</div>
+               </div>
+             </div>
+             <div class="flex items-center gap-4">
+               <div class="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-sm">4</div>
+               <div class="bg-slate-700/50 p-3 rounded-lg flex-1 border border-slate-600">
+                 <div class="font-bold text-sm">Final Invoice</div>
+                 <div class="text-xs text-slate-400">Consolidated invoice printed at Cashier</div>
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inpatient" class="py-24 px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Inpatient & Wards</h2>
+      <p class="text-slate-500">Manage admissions, discharges, and ward rounds efficiently.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
+        <div class="text-4xl mb-4">🛏️</div>
+        <h3 class="font-bold text-slate-900 mb-2">Bed Management</h3>
+        <p class="text-sm text-slate-500">Visual dashboard of occupied/free beds. Manage ward allocation and transfers.</p>
+      </div>
+      <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
+        <div class="text-4xl mb-4">📋</div>
+        <h3 class="font-bold text-slate-900 mb-2">Nurse's Notes</h3>
+        <p class="text-sm text-slate-500">Record hourly vitals, medication administration, and fluid charts digitally.</p>
+      </div>
+      <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
+        <div class="text-4xl mb-4">🏠</div>
+        <h3 class="font-bold text-slate-900 mb-2">Discharge Summary</h3>
+        <p class="text-sm text-slate-500">Generate professional discharge summaries and gate passes upon bill clearance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-emerald-900 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Modernize your hospital.</h2>
+      <p class="text-xl text-emerald-100 mb-12">Stop losing revenue to pilferage and manual billing errors. Upgrade to MediFlow.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-white text-emerald-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-colors">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="bg-emerald-800 text-white border border-emerald-700 px-10 py-5 rounded-xl font-bold text-lg hover:bg-emerald-700 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

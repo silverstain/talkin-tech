@@ -1,0 +1,203 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="About Us">
+
+  <style>
+    /* Reuse the high-tech grid background */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    /* Reveal Animation */
+    .reveal {
+      animation: reveal 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    @keyframes reveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <section class="pt-48 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1000px] mx-auto text-center">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 text-[11px] font-bold uppercase tracking-widest mb-8 shadow-sm reveal">
+        Est. 2020 • Nairobi, Kenya
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight reveal" style="animation-delay: 0.1s;">
+        We represent the new standard of <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">African Engineering.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-500 mb-12 leading-relaxed max-w-3xl mx-auto font-normal reveal" style="animation-delay: 0.2s;">
+        Talkin Tech is an infrastructure company. We build the hidden engines that power payments, logistics, and data for the continent's most ambitious organizations.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-900 text-white overflow-hidden relative">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-[1200px] mx-auto relative z-10">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Built for High Volume.</h2>
+          <p class="text-slate-400 text-lg leading-relaxed mb-8">
+            Most local software crashes when it hits 1,000 users. Ours is just getting started. We architect systems designed to handle millions of transactions without blinking.
+          </p>
+          <div class="grid grid-cols-2 gap-8 border-t border-slate-800 pt-8">
+            <div>
+              <div class="text-4xl font-bold text-white mb-1">15M+</div>
+              <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Requests / Month</div>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-green-500 mb-1">99.99%</div>
+              <div class="text-xs font-bold text-slate-500 uppercase tracking-widest">Uptime SLA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-950 rounded-2xl border border-slate-800 p-8 shadow-2xl relative">
+          <div class="flex gap-2 mb-6">
+            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+            <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+            <div class="w-2 h-2 rounded-full bg-slate-800"></div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-1">
+              <span>Cluster A (Nairobi)</span>
+              <span class="text-green-500">Online</span>
+            </div>
+            <div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+               <div class="h-full w-[40%] bg-blue-600 rounded-full"></div>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-1 pt-2">
+              <span>Cluster B (Mombasa)</span>
+              <span class="text-green-500">Online</span>
+            </div>
+            <div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+               <div class="h-full w-[25%] bg-indigo-600 rounded-full"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-1 pt-2">
+              <span>Database Replicas</span>
+              <span class="text-blue-500">Syncing...</span>
+            </div>
+            <div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+               <div class="h-full w-[80%] bg-slate-700 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Our DNA</h2>
+        <p class="text-slate-500 mt-4">The principles that guide every line of code we write.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+          <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl mb-6">🔒</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Security is not optional.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            We deal with financial data. Every system we build has bank-grade encryption and audit logs by default.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+          <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl mb-6">🌍</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Context Matters.</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            We optimize for slow 3G networks, integrate M-Pesa natively, and build offline-first capability for remote areas.
+          </p>
+        </div>
+
+        <div class="bg-blue-600 p-8 rounded-3xl text-white">
+          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl mb-6">⚡</div>
+          <h3 class="text-xl font-bold text-white mb-3">Speed Wins.</h3>
+          <p class="text-blue-100 text-sm leading-relaxed">
+            Slow software loses customers. We obsess over milliseconds, database indexing, and caching strategies.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-[1200px] mx-auto">
+      <h2 class="text-3xl font-bold text-slate-900 mb-12">Leadership</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 bg-slate-200 rounded-full overflow-hidden">
+               <div class="w-full h-full bg-slate-300"></div>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900">Elijah Onsongo</h3>
+              <p class="text-xs text-blue-600 font-bold uppercase tracking-widest">Founder & CEO</p>
+            </div>
+          </div>
+          <p class="mt-6 text-slate-500 text-sm">
+            Full-stack engineer with 6+ years experience building financial systems in East Africa.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 bg-slate-200 rounded-full overflow-hidden">
+               <div class="w-full h-full bg-slate-300"></div>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900">Head of Product</h3>
+              <p class="text-xs text-blue-600 font-bold uppercase tracking-widest">Engineering</p>
+            </div>
+          </div>
+          <p class="mt-6 text-slate-500 text-sm">
+            Systems Architect specializing in high-availability cloud infrastructure and APIs.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 bg-slate-200 rounded-full overflow-hidden">
+               <div class="w-full h-full bg-slate-300"></div>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900">Head of Operations</h3>
+              <p class="text-xs text-blue-600 font-bold uppercase tracking-widest">Client Success</p>
+            </div>
+          </div>
+          <p class="mt-6 text-slate-500 text-sm">
+            Ensuring our partners receive 24/7 support and seamless deployment experiences.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white text-center">
+    <h2 class="text-3xl font-bold text-slate-900 mb-8">Ready to work with the best?</h2>
+    <a href="/contact" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-600 transition-colors shadow-lg hover:shadow-blue-600/20">
+      Contact Our Team
+    </a>
+  </section>
+
+</MainLayout>

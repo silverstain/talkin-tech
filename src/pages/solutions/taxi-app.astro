@@ -1,0 +1,369 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Taxi & Ride-Hailing App Solution">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #0ea5e9, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+    <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none translate-x-1/2 -translate-y-1/2"></div>
+    
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      
+      <div>
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[12px] font-bold uppercase tracking-widest mb-8">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          White-Label Solution • iOS & Android
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-[1.1]">
+          Launch your own <br />
+          <span class="text-gradient">Ride-Hailing Empire.</span>
+        </h1>
+        
+        <p class="text-xl text-slate-400 mb-10 leading-relaxed">
+          Don't just build an app; build a business. A complete <strong>Uber/Bolt clone</strong> with advanced Dispatch Logic, Driver Wallets, and M-Pesa Integration tailored for the African market.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#ecosystem" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/30 text-center">
+            Explore the Ecosystem
+          </a>
+          <a href="/contact" class="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-colors text-center">
+            Get Pricing
+          </a>
+        </div>
+        
+        <div class="mt-10 flex items-center gap-4 text-sm font-bold text-slate-500">
+          <span class="flex items-center gap-2"><span class="text-blue-500">✓</span> Taxi</span>
+          <span class="flex items-center gap-2"><span class="text-blue-500">✓</span> Boda Boda</span>
+          <span class="flex items-center gap-2"><span class="text-blue-500">✓</span> TukTuk</span>
+          <span class="flex items-center gap-2"><span class="text-blue-500">✓</span> Parcel</span>
+          <span class="flex items-center gap-2"><span class="text-blue-500">✓</span> Trucking</span>
+        </div>
+      </div>
+
+      <div class="relative">
+         <div class="relative z-10 space-y-4">
+            <div class="bg-slate-800 rounded-xl p-4 border border-slate-700 shadow-2xl transform translate-x-8">
+               <div class="flex items-center gap-4 mb-2">
+                 <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                 <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                 <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                 <div class="text-xs text-slate-500 font-mono flex-1 text-center">Super Admin Dispatch</div>
+               </div>
+               <div class="grid grid-cols-3 gap-2">
+                 <div class="h-20 bg-slate-700/50 rounded-lg border border-slate-600/50 flex flex-col items-center justify-center">
+                    <span class="text-xs text-slate-400">Active</span>
+                    <span class="text-xl font-bold text-green-500">142</span>
+                 </div>
+                 <div class="h-20 bg-slate-700/50 rounded-lg border border-slate-600/50 flex flex-col items-center justify-center">
+                    <span class="text-xs text-slate-400">Revenue</span>
+                    <span class="text-xl font-bold text-white">$4.2k</span>
+                 </div>
+                 <div class="h-20 bg-slate-700/50 rounded-lg border border-slate-600/50 flex flex-col items-center justify-center">
+                    <span class="text-xs text-slate-400">Surge</span>
+                    <span class="text-xl font-bold text-red-500">1.5x</span>
+                 </div>
+               </div>
+            </div>
+
+            <div class="flex gap-4">
+               <div class="w-1/2 bg-white rounded-2xl p-3 shadow-2xl transform -rotate-3 border-4 border-slate-900">
+                  <div class="h-4 w-20 bg-slate-200 rounded-full mx-auto mb-2"></div>
+                  <div class="bg-slate-100 rounded-xl h-32 mb-2 flex items-center justify-center text-4xl">🗺️</div>
+                  <div class="h-8 bg-black rounded-lg w-full"></div>
+               </div>
+               <div class="w-1/2 bg-black rounded-2xl p-3 shadow-2xl transform rotate-3 border-4 border-slate-700">
+                  <div class="h-4 w-20 bg-slate-800 rounded-full mx-auto mb-2"></div>
+                  <div class="bg-slate-900 rounded-xl h-32 mb-2 flex items-center justify-center text-4xl">🟢</div>
+                  <div class="h-8 bg-green-600 rounded-lg w-full"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/90 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#ecosystem" class="hover:text-blue-600 transition-colors">The Ecosystem</a>
+      <a href="#passenger" class="hover:text-blue-600 transition-colors">Passenger App</a>
+      <a href="#driver" class="hover:text-blue-600 transition-colors">Driver App</a>
+      <a href="#admin" class="hover:text-blue-600 transition-colors">Admin Panel</a>
+      <a href="#business" class="hover:text-blue-600 transition-colors">Business Logic</a>
+    </div>
+  </div>
+
+  <section id="ecosystem" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">A Complete Mobility Suite</h2>
+      <p class="text-slate-500 text-lg">We provide three interconnected applications that communicate in real-time.</p>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto grid md:grid-cols-3 gap-8">
+      <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-300 transition-all">
+        <div class="text-4xl mb-4">📱</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Customer App</h3>
+        <p class="text-sm text-slate-500">Available on iOS & Android. Allows users to book rides, track drivers, and pay securely.</p>
+      </div>
+      <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-green-300 transition-all">
+        <div class="text-4xl mb-4">🚘</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Driver App</h3>
+        <p class="text-sm text-slate-500">Dedicated app for partners to receive requests, navigate, and manage their earnings wallet.</p>
+      </div>
+      <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-slate-400 transition-all">
+        <div class="text-4xl mb-4">🖥️</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Admin Panel</h3>
+        <p class="text-sm text-slate-500">Web-based dashboard for you (the owner) to manage fleet, set prices, and view analytics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="passenger" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5 relative">
+         <div class="w-[300px] h-[600px] bg-white rounded-[3rem] border-[8px] border-slate-200 shadow-2xl mx-auto overflow-hidden relative">
+            <div class="absolute inset-0 bg-slate-50 flex flex-col">
+              <div class="h-2/3 bg-blue-50 relative overflow-hidden">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl opacity-20">📍</div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-4 bg-black text-white p-2 rounded-full shadow-lg z-10">🚖</div>
+              </div>
+              <div class="flex-1 bg-white rounded-t-3xl p-6 relative -top-6 shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+                 <div class="w-12 h-1 bg-slate-200 rounded-full mx-auto mb-6"></div>
+                 <div class="space-y-4">
+                   <div class="flex items-center gap-4 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                     <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center">🚕</div>
+                     <div class="flex-1">
+                       <div class="font-bold text-sm">Economy</div>
+                       <div class="text-xs text-slate-500">4 mins away</div>
+                     </div>
+                     <div class="font-bold text-sm">KES 350</div>
+                   </div>
+                   <div class="flex items-center gap-4 p-3 bg-blue-50 border border-blue-200 rounded-xl">
+                     <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center">🚙</div>
+                     <div class="flex-1">
+                       <div class="font-bold text-sm text-blue-900">Comfort</div>
+                       <div class="text-xs text-blue-600">6 mins away</div>
+                     </div>
+                     <div class="font-bold text-sm text-blue-900">KES 520</div>
+                   </div>
+                 </div>
+                 <button class="w-full bg-black text-white py-3 rounded-xl font-bold mt-4 text-sm">Confirm Booking</button>
+              </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">The Passenger Experience</h2>
+        <p class="text-lg text-slate-500 mb-8">
+          A world-class UX designed to make booking a ride as simple as 2 taps. Optimized for African network conditions.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+             <h4 class="font-bold text-slate-900 mb-2">Ride Options</h4>
+             <p class="text-sm text-slate-600">Support for multiple vehicle types: Boda Boda, TukTuk, Standard, XL, and Corporate.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-slate-900 mb-2">Schedule Ride</h4>
+             <p class="text-sm text-slate-600">Users can book a ride for later. Great for airport transfers and early morning commutes.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-slate-900 mb-2">Real-Time Chat</h4>
+             <p class="text-sm text-slate-600">In-app chat and VoIP calling to driver (masking phone numbers for privacy).</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-slate-900 mb-2">Safety Toolkit</h4>
+             <p class="text-sm text-slate-600">SOS Panic button, Share Trip Details with family, and Emergency Contacts integration.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-slate-900 mb-2">Multiple Stops</h4>
+             <p class="text-sm text-slate-600">Add up to 3 stops in a single trip. The app auto-calculates the new fare.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-slate-900 mb-2">Corporate Accounts</h4>
+             <p class="text-sm text-slate-600">Allow companies to book rides for employees with monthly billing instead of cash.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="driver" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      
+      <div class="lg:col-span-7 order-2 lg:order-1">
+        <h2 class="text-3xl font-bold text-white mb-6">The Driver Companion</h2>
+        <p class="text-lg text-slate-400 mb-8">
+          Give your partners the tools they need to maximize earnings. Built with offline-first architecture for patchy internet zones.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-green-500/20 text-green-400 rounded-lg flex items-center justify-center text-xl flex-shrink-0">💰</div>
+             <div>
+               <h4 class="font-bold text-white">Driver Wallet & Earnings</h4>
+               <p class="text-sm text-slate-400">Drivers can see daily earnings, commission deducted, and withdraw cash to M-Pesa instantly.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🗺️</div>
+             <div>
+               <h4 class="font-bold text-white">Heatmaps & Demand</h4>
+               <p class="text-sm text-slate-400">Visual indicators showing high-demand areas (Surge Zones) to guide drivers where to go.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-purple-500/20 text-purple-400 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📄</div>
+             <div>
+               <h4 class="font-bold text-white">Document Management</h4>
+               <p class="text-sm text-slate-400">In-app upload for Driving License, NTSA Inspection, and Insurance. Auto-expiry alerts.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 order-1 lg:order-2">
+         <div class="w-[300px] h-[600px] bg-slate-800 rounded-[3rem] border-[8px] border-slate-950 shadow-2xl mx-auto overflow-hidden relative">
+            <div class="absolute inset-0 bg-slate-900 flex flex-col">
+               <div class="h-24 bg-green-600 p-6 flex items-end justify-between">
+                 <span class="font-bold text-white">You are Online</span>
+                 <div class="w-10 h-6 bg-white/20 rounded-full relative"><div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div></div>
+               </div>
+               <div class="flex-1 p-6">
+                  <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 animate-pulse">
+                     <div class="flex justify-between items-center mb-4">
+                        <div class="text-xs font-bold text-slate-400 uppercase">Incoming Request</div>
+                        <div class="text-xs font-bold text-white bg-slate-700 px-2 py-1 rounded">2.4km</div>
+                     </div>
+                     <div class="text-2xl font-bold text-white mb-1">Standard Ride</div>
+                     <div class="text-sm text-slate-400 mb-6">Dropoff: Westlands Square</div>
+                     <div class="flex gap-3">
+                        <button class="flex-1 bg-red-500/20 text-red-500 py-3 rounded-lg font-bold text-sm">Decline</button>
+                        <button class="flex-1 bg-green-500 text-white py-3 rounded-lg font-bold text-sm">Accept (12s)</button>
+                     </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4 mt-6">
+                     <div class="bg-slate-800 p-4 rounded-xl text-center">
+                        <div class="text-2xl font-bold text-white">12</div>
+                        <div class="text-xs text-slate-500">Trips</div>
+                     </div>
+                     <div class="bg-slate-800 p-4 rounded-xl text-center">
+                        <div class="text-2xl font-bold text-green-500">$45</div>
+                        <div class="text-xs text-slate-500">Earnings</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="admin" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Super Admin Dashboard</h2>
+        <p class="text-slate-500">The control tower for your business. Total visibility, total control.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+           <h3 class="text-xl font-bold text-slate-900 mb-6">Financial Control</h3>
+           <ul class="space-y-4">
+             <li class="flex items-start gap-3">
+               <div class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+               <div>
+                 <strong>Commission Settings:</strong> Set your cut (e.g., 15%). The system auto-deducts this from the driver's wallet for every trip.
+               </div>
+             </li>
+             <li class="flex items-start gap-3">
+               <div class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+               <div>
+                 <strong>Dynamic Pricing:</strong> Set Base Fare, Cost per Km, and Cost per Minute for different vehicle classes (Boda vs Van).
+               </div>
+             </li>
+             <li class="flex items-start gap-3">
+               <div class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+               <div>
+                 <strong>Surge Pricing:</strong> Draw zones on the map (e.g., Airport) and apply a multiplier (x1.5) during peak hours.
+               </div>
+             </li>
+           </ul>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+           <h3 class="text-xl font-bold text-slate-900 mb-6">Fleet Management</h3>
+           <ul class="space-y-4">
+             <li class="flex items-start gap-3">
+               <div class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+               <div>
+                 <strong>God's Eye View:</strong> See every active driver and ongoing trip on a live map in real-time.
+               </div>
+             </li>
+             <li class="flex items-start gap-3">
+               <div class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+               <div>
+                 <strong>Manual Dispatch:</strong> Receive phone bookings and manually assign a nearby driver from the panel.
+               </div>
+             </li>
+             <li class="flex items-start gap-3">
+               <div class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+               <div>
+                 <strong>Driver Approval:</strong> Review and approve new driver registrations and documents.
+               </div>
+             </li>
+           </ul>
+        </div>
+      </div>
+      
+      <div class="mt-16 pt-16 border-t border-slate-100 text-center">
+        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Powered By World-Class Tech</p>
+        <div class="flex flex-wrap justify-center gap-4">
+           <span class="px-4 py-2 bg-slate-100 rounded-lg text-sm font-bold text-slate-600">Google Maps API</span>
+           <span class="px-4 py-2 bg-slate-100 rounded-lg text-sm font-bold text-slate-600">Flutter</span>
+           <span class="px-4 py-2 bg-slate-100 rounded-lg text-sm font-bold text-slate-600">Node.js</span>
+           <span class="px-4 py-2 bg-slate-100 rounded-lg text-sm font-bold text-slate-600">MongoDB</span>
+           <span class="px-4 py-2 bg-slate-100 rounded-lg text-sm font-bold text-slate-600">Socket.io (Real-time)</span>
+           <span class="px-4 py-2 bg-slate-100 rounded-lg text-sm font-bold text-slate-600">Firebase</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-900 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Ready to disrupt the market?</h2>
+      <p class="text-xl text-slate-400 mb-12">Get your white-label Taxi App deployed in less than 14 days.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-500 transition-colors">
+          Get Quote & Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="bg-white/10 text-white border border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

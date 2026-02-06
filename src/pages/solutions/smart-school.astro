@@ -1,0 +1,332 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Smart School Management System (ERP) - End to End">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #ea580c, #c2410c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Tech Grid */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html {
+      scroll-padding-top: 100px;
+    }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-orange-50 border border-orange-100 text-orange-700 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+        CBC Compliant • Universities • TVETs • High Schools
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        The Future of <br />
+        <span class="text-gradient">Education Management.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-4xl mx-auto">
+        A unified platform automating every department: <strong>Admissions, Academics, Finance, Transport, Boarding, and E-Learning</strong>. Stop using isolated spreadsheets.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#administration" class="bg-orange-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-orange-700 transition-colors shadow-lg shadow-orange-600/30">
+          View Full Feature List
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
+          Download Brochure
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900">Fee Collection</div><div class="text-xs text-slate-500 uppercase">100% Automated</div></div>
+        <div><div class="font-bold text-slate-900">Grading</div><div class="text-xs text-slate-500 uppercase">CBC, 8-4-4, IGCSE</div></div>
+        <div><div class="font-bold text-slate-900">Portals</div><div class="text-xs text-slate-500 uppercase">Student & Parent</div></div>
+        <div><div class="font-bold text-slate-900">Timetable</div><div class="text-xs text-slate-500 uppercase">Auto-Generation</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/90 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#administration" class="hover:text-orange-600 transition-colors">Administration</a>
+      <a href="#finance" class="hover:text-orange-600 transition-colors">Finance & Fees</a>
+      <a href="#academics" class="hover:text-orange-600 transition-colors">Academics</a>
+      <a href="#operations" class="hover:text-orange-600 transition-colors">Operations</a>
+      <a href="#portals" class="hover:text-orange-600 transition-colors">Portals & Apps</a>
+    </div>
+  </div>
+
+  <section id="administration" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16">
+      <div class="lg:col-span-4">
+        <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center text-2xl mb-6">🏛️</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Core Administration</h2>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          Streamline the daily running of the institution. Manage student lifecycles from application to alumni status.
+        </p>
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+          <h4 class="font-bold text-slate-900 mb-2">Biometric Attendance</h4>
+          <p class="text-sm text-slate-600">Integrate with biometric scanners for staff and student attendance. Auto-SMS to parents if a student is absent.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-8">
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2 border-b border-slate-100 pb-2">Student Information System (SIS)</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> Digital Admission Register (NEMIS Compliant).</li>
+              <li class="flex gap-2"><span>•</span> Capture Medical History, Allergies, and Special Needs.</li>
+              <li class="flex gap-2"><span>•</span> Manage Sibling links for family billing.</li>
+              <li class="flex gap-2"><span>•</span> Generate Student ID Cards with Barcodes.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2 border-b border-slate-100 pb-2">HR & Staff Management</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> Staff Database (TSC / Board Employed).</li>
+              <li class="flex gap-2"><span>•</span> Leave Management & Approval Workflow.</li>
+              <li class="flex gap-2"><span>•</span> Teacher Load Allocation & Performance tracking.</li>
+              <li class="flex gap-2"><span>•</span> Payroll Processing (P9, Payslips, Bank Files).</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2 border-b border-slate-100 pb-2">Disciplinary Module</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> Record cases, punishments, and suspensions.</li>
+              <li class="flex gap-2"><span>•</span> Automated notification letters to parents.</li>
+              <li class="flex gap-2"><span>•</span> Track behavioral trends per student.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2 border-b border-slate-100 pb-2">Alumni Management</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> Database of past students and contacts.</li>
+              <li class="flex gap-2"><span>•</span> Fundraising & Events module for Alumni networks.</li>
+              <li class="flex gap-2"><span>•</span> Career tracking and success stories.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="finance" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16">
+      <div class="lg:col-span-4">
+        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-6">💰</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Finance & Fees</h2>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          Eliminate cash handling and reconciliation errors. A complete accounting suite tailored for schools.
+        </p>
+        <div class="bg-green-50 p-6 rounded-2xl border border-green-100">
+          <h4 class="font-bold text-green-900 mb-2">Automated Reconciliation</h4>
+          <p class="text-sm text-green-700">M-Pesa Paybill and Bank deposits are matched to student accounts automatically. 100% accuracy guaranteed.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-8">
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-lg mb-4">Fee Management</h4>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex gap-2"><strong>Fee Structures:</strong> Define fees per class, boarding status, or new admission.</li>
+              <li class="flex gap-2"><strong>Invoicing:</strong> Bulk invoice entire classes at term start.</li>
+              <li class="flex gap-2"><strong>Waivers/Bursaries:</strong> Manage scholarships and CDF allocations.</li>
+              <li class="flex gap-2"><strong>Arrears Management:</strong> Auto-block access to exams/portal for defaulters.</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-lg mb-4">School Accounting</h4>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex gap-2"><strong>Vote Heads:</strong> Track budget vs actuals per vote head (e.g., Tuition, Transport).</li>
+              <li class="flex gap-2"><strong>Petty Cash:</strong> Requisition and approval workflow.</li>
+              <li class="flex gap-2"><strong>Suppliers:</strong> LPO generation and supplier aging reports.</li>
+              <li class="flex gap-2"><strong>Reports:</strong> Balance Sheet, Trial Balance, Income Statement.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="academics" class="py-24 px-6 bg-orange-50/50 border-b border-orange-100">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Academics & E-Learning</h2>
+        <p class="text-slate-500 text-lg">Comprehensive tools for 8-4-4, IGCSE, and the Competency Based Curriculum (CBC).</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm">
+          <div class="text-4xl mb-4">📝</div>
+          <h3 class="font-bold text-xl text-slate-900 mb-2">Examination & Grading</h3>
+          <p class="text-sm text-slate-500 mb-4">Define grading scales, exam weights (CATs/Main), and subject clusters. Auto-calculate mean scores, streams positions, and value added progress.</p>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Graphical Performance Trends</li>
+            <li>• Bulk Report Card Printing (PDF)</li>
+            <li>• Merit Lists Generation</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="font-bold text-xl text-slate-900 mb-2">CBC Assessment</h3>
+          <p class="text-sm text-slate-500 mb-4">Specialized module for CBC. Record Rubrics, Strands, and Sub-strands. Generate reports based on Exceeding Expectation (EE) to Below Expectation (BE).</p>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Summative & Formative Assessments</li>
+            <li>• Portfolio Uploads</li>
+            <li>• KNEC Assessment Data Export</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-orange-100 shadow-sm">
+          <div class="text-4xl mb-4">📅</div>
+          <h3 class="font-bold text-xl text-slate-900 mb-2">Timetable & Allocations</h3>
+          <p class="text-sm text-slate-500 mb-4">Drag-and-drop timetable generator. Detects conflict automatically (e.g., same teacher in two classes). Manages room allocation.</p>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Teacher Substitution Management</li>
+            <li>• Class & Exam Timetables</li>
+            <li>• Export to PDF/Excel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="operations" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-12">
+        <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">School Operations & Logistics</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">🚍 Transport</h4>
+            <ul class="text-sm text-slate-600 space-y-2">
+              <li>• Route Management & Zones.</li>
+              <li>• Transport Fee Allocation.</li>
+              <li>• Vehicle Maintenance Logs.</li>
+              <li>• Driver & Assistant Assignment.</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">🛏️ Hostel/Boarding</h4>
+            <ul class="text-sm text-slate-600 space-y-2">
+              <li>• Dormitory Capacity Management.</li>
+              <li>• Bed Allocation System.</li>
+              <li>• Boarding Stock (Mattresses etc).</li>
+              <li>• Exeat/Gate Pass System.</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">📚 Library</h4>
+            <ul class="text-sm text-slate-600 space-y-2">
+              <li>• Book Cataloging & Barcoding.</li>
+              <li>• Issue & Return Tracking.</li>
+              <li>• Overdue Fines Calculation.</li>
+              <li>• Digital E-Book Repository.</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">📦 Inventory/Stores</h4>
+            <ul class="text-sm text-slate-600 space-y-2">
+              <li>• Purchase Requisition Workflow.</li>
+              <li>• Stock Taking & Audits.</li>
+              <li>• Kitchen/Foodstuff Tracking.</li>
+              <li>• Uniform Sales (POS).</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portals" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="relative flex justify-center">
+        <div class="w-[300px] h-[600px] bg-slate-800 rounded-[3rem] border-[8px] border-slate-950 shadow-2xl relative overflow-hidden">
+           <div class="absolute inset-0 bg-slate-900 flex flex-col">
+              <div class="bg-orange-600 h-32 p-6 flex flex-col justify-end text-white rounded-b-3xl relative z-10">
+                 <div class="text-xs opacity-80 uppercase font-bold">Parent App</div>
+                 <div class="font-bold text-xl">Hello, Parent</div>
+              </div>
+              <div class="flex-1 p-6 space-y-4">
+                 <div class="bg-white/10 p-4 rounded-xl border border-white/5">
+                    <div class="text-xs text-slate-400 uppercase">Fee Balance</div>
+                    <div class="text-2xl font-bold text-white">KES 12,500</div>
+                    <div class="mt-2 text-xs text-green-400 font-bold">Pay Now via M-Pesa</div>
+                 </div>
+                 <div class="space-y-2">
+                    <div class="bg-slate-800 p-3 rounded-lg text-sm text-slate-300 flex items-center gap-3 border border-slate-700">
+                       <span>📊</span> Download Report Form
+                    </div>
+                    <div class="bg-slate-800 p-3 rounded-lg text-sm text-slate-300 flex items-center gap-3 border border-slate-700">
+                       <span>📅</span> View Events Calendar
+                    </div>
+                    <div class="bg-slate-800 p-3 rounded-lg text-sm text-slate-300 flex items-center gap-3 border border-slate-700">
+                       <span>📝</span> Homework Diary
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold mb-6">Connected Community</h2>
+        <p class="text-slate-400 mb-8 text-lg">
+          Bridge the gap between school and home. Give stakeholders real-time access to information.
+        </p>
+        
+        <div class="space-y-8">
+          <div>
+             <h4 class="font-bold text-white text-lg">Student/Parent Portal</h4>
+             <p class="text-sm text-slate-400 mt-2">Web and Mobile App for parents to view results, fee statements, and track attendance. Includes online fee payment gateway.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-white text-lg">Teacher Portal</h4>
+             <p class="text-sm text-slate-400 mt-2">Teachers can enter marks, upload assignments, and mark attendance from their smartphones or laptops.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-white text-lg">Communication Suite</h4>
+             <p class="text-sm text-slate-400 mt-2">Bulk SMS and Email integration. Send personalized newsletters, fee reminders, and emergency alerts instantly.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Digitize your institution today.</h2>
+      <p class="text-xl text-slate-500 mb-12">Join over 100+ schools and universities running on Talkin Tech Smart School ERP.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-orange-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-orange-700 transition-colors shadow-lg shadow-orange-600/30">
+          Request Free Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

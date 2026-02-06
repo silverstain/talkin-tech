@@ -1,0 +1,291 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Point of Sale (POS) & Inventory System">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #7c3aed, #4f46e5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-purple-50 border border-purple-100 text-purple-700 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+        KRA eTIMS Ready • Restaurants • Supermarkets • Hardware
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        The Ultimate <br />
+        <span class="text-gradient">Retail Engine.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-4xl mx-auto">
+        From a busy <strong>Restaurant Kitchen</strong> to a high-volume <strong>Supermarket Checkout</strong>. Manage Sales, Stock, and Recipes with military precision.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#restaurant" class="bg-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-purple-700 transition-colors shadow-lg shadow-purple-600/30">
+          Restaurant Mode
+        </a>
+        <a href="#retail" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
+          Retail Mode
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900">Touch Screen</div><div class="text-xs text-slate-500 uppercase">Optimized UI</div></div>
+        <div><div class="font-bold text-slate-900">KRA eTIMS</div><div class="text-xs text-slate-500 uppercase">Auto-Signing</div></div>
+        <div><div class="font-bold text-slate-900">Inventory</div><div class="text-xs text-slate-500 uppercase">Real-Time Tracking</div></div>
+        <div><div class="font-bold text-slate-900">M-Pesa</div><div class="text-xs text-slate-500 uppercase">Auto-Receipting</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/90 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#restaurant" class="hover:text-purple-600 transition-colors">Hospitality / KDS</a>
+      <a href="#retail" class="hover:text-purple-600 transition-colors">Supermarket / Retail</a>
+      <a href="#inventory" class="hover:text-purple-600 transition-colors">Inventory & Recipe</a>
+      <a href="#hardware" class="hover:text-purple-600 transition-colors">Hardware Support</a>
+    </div>
+  </div>
+
+  <section id="restaurant" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6">🍽️</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Restaurant & Bar</h2>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          Speed is everything. Eliminate written chits. Orders move from the Waiter's App directly to the Kitchen Display Screen.
+        </p>
+        <div class="bg-purple-50 p-6 rounded-2xl border border-purple-100 mb-6">
+          <h4 class="font-bold text-purple-900 mb-2">Captain Order App</h4>
+          <p class="text-sm text-purple-700">Waiters take orders on an Android phone/tablet at the table. The order prints instantly at the Bar or Kitchen.</p>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+            <span class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">✓</span> Table Management (Merge/Split Bills)
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+            <span class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">✓</span> Kitchen Display System (KDS)
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+            <span class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">✓</span> Happy Hour & Recipe Costing
+          </li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7">
+        <div class="bg-slate-900 rounded-2xl p-4 shadow-2xl">
+           <div class="bg-slate-800 rounded-xl p-6 border border-white/5">
+              <div class="flex justify-between items-center mb-6">
+                 <div class="text-white font-bold text-lg">Kitchen Display (KDS)</div>
+                 <div class="flex gap-4 text-xs font-bold uppercase text-slate-400">
+                    <span>Avg Time: 12m</span>
+                    <span>Pending: 4</span>
+                 </div>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                 <div class="bg-yellow-500/10 border border-yellow-500/50 rounded-lg overflow-hidden">
+                    <div class="bg-yellow-500 text-black px-3 py-1 text-xs font-bold flex justify-between">
+                       <span>Table 4</span>
+                       <span>12:04 PM</span>
+                    </div>
+                    <div class="p-3 space-y-2 text-sm text-slate-300">
+                       <div class="flex justify-between"><span>2x Burger</span></div>
+                       <div class="flex justify-between"><span>1x Fries</span> <span class="text-yellow-500 text-[10px] uppercase">No Salt</span></div>
+                       <div class="flex justify-between"><span>2x Coke</span></div>
+                    </div>
+                 </div>
+                 <div class="bg-green-500/10 border border-green-500/50 rounded-lg overflow-hidden">
+                    <div class="bg-green-600 text-white px-3 py-1 text-xs font-bold flex justify-between">
+                       <span>Table 8</span>
+                       <span>12:01 PM</span>
+                    </div>
+                    <div class="p-3 space-y-2 text-sm text-slate-300">
+                       <div class="flex justify-between line-through text-slate-500"><span>1x Pizza</span></div>
+                       <div class="flex justify-between line-through text-slate-500"><span>1x Wings</span></div>
+                       <div class="mt-2 text-center text-green-500 text-xs font-bold uppercase border-t border-slate-700 pt-2">Ready to Serve</div>
+                    </div>
+                 </div>
+                 <div class="bg-red-500/10 border border-red-500/50 rounded-lg overflow-hidden">
+                    <div class="bg-red-600 text-white px-3 py-1 text-xs font-bold flex justify-between">
+                       <span>Takeaway</span>
+                       <span>12:15 PM</span>
+                    </div>
+                    <div class="p-3 space-y-2 text-sm text-slate-300">
+                       <div class="flex justify-between"><span>1x Masala Chips</span></div>
+                       <div class="flex justify-between"><span>1x Grilled Chicken</span></div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="retail" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Retail & Supermarket</h2>
+      <p class="text-slate-500 text-lg">High-volume checkout designed for speed and accuracy.</p>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="text-4xl mb-4">🛒</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Fast Checkout</h3>
+        <p class="text-sm text-slate-500">Barcode scanning, Touch interface, and Keyboard shortcuts. Process a sale in under 5 seconds.</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="text-4xl mb-4">⚖️</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Hardware Store</h3>
+        <p class="text-sm text-slate-500">Sell by specialized units (e.g., Meters of Cable, Kg of Cement, Pieces). Convert bulk stock to retail units auto-magically.</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="text-4xl mb-4">💊</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Pharmacy Mode</h3>
+        <p class="text-sm text-slate-500">Track Batch Numbers and Expiry Dates. System alerts you before drugs expire (FIFO).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="inventory" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="relative">
+        <div class="bg-slate-900 rounded-[2.5rem] p-8 relative overflow-hidden shadow-2xl">
+           <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+           <div class="relative z-10">
+             <div class="flex justify-between items-center mb-6">
+                <div class="text-white font-bold text-lg">Recipe: Beef Burger</div>
+                <div class="text-sm text-slate-400">Cost: KES 180</div>
+             </div>
+             <div class="space-y-3">
+                <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/10">
+                   <span class="text-slate-300">Burger Bun</span>
+                   <span class="text-white font-bold">1 Pc</span>
+                </div>
+                <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/10">
+                   <span class="text-slate-300">Minced Meat</span>
+                   <span class="text-white font-bold">150g</span>
+                </div>
+                <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/10">
+                   <span class="text-slate-300">Cheese Slice</span>
+                   <span class="text-white font-bold">1 Pc</span>
+                </div>
+                <div class="flex justify-between items-center bg-white/5 p-3 rounded-lg border border-white/10">
+                   <span class="text-slate-300">Lettuce</span>
+                   <span class="text-white font-bold">20g</span>
+                </div>
+             </div>
+             <div class="mt-6 pt-6 border-t border-white/10">
+                <p class="text-xs text-slate-400 mb-2">When sold, system auto-deducts raw materials from store.</p>
+                <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+                   <div class="bg-green-500 h-full w-3/4"></div>
+                </div>
+                <div class="flex justify-between text-xs mt-1">
+                   <span class="text-slate-400">Stock Level</span>
+                   <span class="text-green-400">Healthy</span>
+                </div>
+             </div>
+           </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Advanced Inventory</h2>
+        <p class="text-slate-500 mb-8 text-lg">
+          Stop guessing your profits. Know exactly how much stock you have and what it cost you.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🍲</div>
+             <div>
+               <h4 class="font-bold text-slate-900">Recipe Management</h4>
+               <p class="text-sm text-slate-500">Link raw materials (Flour, Oil) to finished products (Chapati). Selling a product auto-deducts ingredients.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🚛</div>
+             <div>
+               <h4 class="font-bold text-slate-900">Supplier & LPO</h4>
+               <p class="text-sm text-slate-500">Manage suppliers, generate LPOs, and track Goods Received Notes (GRN) to update stock.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">⚠️</div>
+             <div>
+               <h4 class="font-bold text-slate-900">Low Stock Alerts</h4>
+               <p class="text-sm text-slate-500">Receive SMS/Email alerts when critical items hit their re-order level.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="hardware" class="py-24 px-6 bg-slate-900 text-white">
+    <div class="max-w-[1200px] mx-auto text-center">
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold mb-4">Works with your Hardware</h2>
+        <p class="text-slate-400">Compatible with all major POS peripherals available in Nairobi.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="p-6 border border-slate-700 rounded-2xl bg-slate-800">
+          <div class="text-3xl mb-4">🖨️</div>
+          <h3 class="font-bold mb-2">Thermal Printers</h3>
+          <p class="text-sm text-slate-400">Epson, Xprinter, Rongta (USB/LAN/Bluetooth).</p>
+        </div>
+        <div class="p-6 border border-slate-700 rounded-2xl bg-slate-800">
+          <div class="text-3xl mb-4">🔫</div>
+          <h3 class="font-bold mb-2">Barcode Scanners</h3>
+          <p class="text-sm text-slate-400">1D and 2D (QR) scanners for rapid checkout.</p>
+        </div>
+        <div class="p-6 border border-slate-700 rounded-2xl bg-slate-800">
+          <div class="text-3xl mb-4">⚖️</div>
+          <h3 class="font-bold mb-2">Weighing Scales</h3>
+          <p class="text-sm text-slate-400">Digital barcode scales for butcheries and greengrocers.</p>
+        </div>
+        <div class="p-6 border border-slate-700 rounded-2xl bg-slate-800">
+          <div class="text-3xl mb-4">🖥️</div>
+          <h3 class="font-bold mb-2">Touch Screens</h3>
+          <p class="text-sm text-slate-400">Works on any Windows/Android Touch PC or Tablet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Stop revenue leakage today.</h2>
+      <p class="text-xl text-slate-500 mb-12">Get a system that tracks every coin and every gram of inventory.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-purple-700 transition-colors shadow-lg shadow-purple-600/30">
+          Request Quote
+        </a>
+        <a href="https://wa.me/254715235119" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

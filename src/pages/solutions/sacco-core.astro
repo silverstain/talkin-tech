@@ -1,0 +1,397 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Sacco Management System (ERP) - End to End">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #2563eb, #4f46e5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Tech Grid */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    /* Smooth Scroll Padding */
+    html {
+      scroll-padding-top: 100px;
+    }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-900 text-white text-[12px] font-bold uppercase tracking-widest mb-8 shadow-xl">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        SASRA Regulated • Non-Deposit Taking • Housing Co-ops
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        The Most Complete <br />
+        <span class="text-gradient">Sacco ERP</span> in Africa.
+      </h1>
+      
+      <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-4xl mx-auto">
+        A single, unified platform covering every inch of your operations: From <strong>Member Onboarding</strong> to <strong>Financial Reporting</strong>, <strong>CRB Listing</strong>, and <strong>Mobile Banking</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#member-mgt" class="bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30">
+          View Full Feature List
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
+          Download Brochure
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900">BOSA & FOSA</div><div class="text-xs text-slate-500 uppercase">Fully Integrated</div></div>
+        <div><div class="font-bold text-slate-900">SASRA Reports</div><div class="text-xs text-slate-500 uppercase">Automated</div></div>
+        <div><div class="font-bold text-slate-900">M-Pesa</div><div class="text-xs text-slate-500 uppercase">C2B & B2C</div></div>
+        <div><div class="font-bold text-slate-900">Cloud Based</div><div class="text-xs text-slate-500 uppercase">Access Anywhere</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/90 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#member-mgt" class="hover:text-blue-600 transition-colors">Membership</a>
+      <a href="#bosa" class="hover:text-blue-600 transition-colors">BOSA / Loans</a>
+      <a href="#fosa" class="hover:text-blue-600 transition-colors">FOSA / Banking</a>
+      <a href="#accounting" class="hover:text-blue-600 transition-colors">Accounting</a>
+      <a href="#channels" class="hover:text-blue-600 transition-colors">Digital Channels</a>
+      <a href="#compliance" class="hover:text-blue-600 transition-colors">Compliance</a>
+    </div>
+  </div>
+
+  <section id="member-mgt" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16">
+      <div class="lg:col-span-4">
+        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6">👥</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Member Management (CRM)</h2>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          The heart of the system. Capture comprehensive KYC data, manage lifecycle events, and handle group memberships seamlessly.
+        </p>
+        <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+          <h4 class="font-bold text-blue-900 mb-2">Paperless Onboarding</h4>
+          <p class="text-sm text-blue-700">Members can join via a public web link or USSD. The system captures photos, ID scans, and signatures digitally.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-8">
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2 border-b border-slate-100 pb-2">Registration & KYC</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> Capture Bio-data, Next of Kin, Beneficiaries.</li>
+              <li class="flex gap-2"><span>•</span> IPRS Integration (Validate ID numbers automatically).</li>
+              <li class="flex gap-2"><span>•</span> Assign Member Numbers (Auto-increment or Custom).</li>
+              <li class="flex gap-2"><span>•</span> Manage Joining Fees & Share Capital requirements.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2 border-b border-slate-100 pb-2">Group/Chama Management</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> Register Groups, Corporates, and Joint Accounts.</li>
+              <li class="flex gap-2"><span>•</span> Track individual members within a group.</li>
+              <li class="flex gap-2"><span>•</span> Group Loan Products & Co-guaranteeing logic.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2 border-b border-slate-100 pb-2">Communication Log</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> View history of all SMS/Emails sent to member.</li>
+              <li class="flex gap-2"><span>•</span> Log complaints and support tickets per member.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2 border-b border-slate-100 pb-2">Exits & Re-admission</h4>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex gap-2"><span>•</span> Manage resignation notices (60 days logic).</li>
+              <li class="flex gap-2"><span>•</span> Calculate refunds (Deposits - Liabilities).</li>
+              <li class="flex gap-2"><span>•</span> Transfer Shares to other members.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bosa" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16">
+      <div class="lg:col-span-4">
+        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-2xl mb-6">💰</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">BOSA Operations</h2>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          The core savings and lending engine. Configurable loan products, automated appraisals, and rigorous guarantor checks.
+        </p>
+        <div class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100">
+          <h4 class="font-bold text-indigo-900 mb-2">CRB Integration</h4>
+          <p class="text-sm text-indigo-700">Check Credit Scores (Metropol/TransUnion) instantly during appraisal. Auto-list defaulters.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-8">
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-lg mb-4">Loan Management</h4>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex gap-2"><strong>Product Config:</strong> Define Interest Rates, Repayment Period, Calculation Method (Reducing/Straight Line/Amortized).</li>
+              <li class="flex gap-2"><strong>Appraisal:</strong> Auto-check 1/3rd rule, x3 or x4 deposits multiplier.</li>
+              <li class="flex gap-2"><strong>Disbursement:</strong> Pay via Cheque, EFT, or M-Pesa B2C.</li>
+              <li class="flex gap-2"><strong>Top-ups/Refinancing:</strong> Bridge existing loans with auto-deduction of balance and bridging fees.</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-lg mb-4">Guarantor Management</h4>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex gap-2"><strong>Validation:</strong> Ensure guarantor has enough free shares.</li>
+              <li class="flex gap-2"><strong>Witnessing:</strong> SMS OTP validation for guarantors.</li>
+              <li class="flex gap-2"><strong>Asset Collateral:</strong> Register Logbooks/Title Deeds as security.</li>
+              <li class="flex gap-2"><strong>Substitution:</strong> Formal process to replace guarantors.</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-lg mb-4">Shares & Deposits</h4>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex gap-2"><strong>Minimum Contributions:</strong> Auto-penalty for missed monthly savings.</li>
+              <li class="flex gap-2"><strong>Share Capital:</strong> Manage transfer of non-withdrawable capital.</li>
+              <li class="flex gap-2"><strong>Statements:</strong> Generate detailed BOSA statements.</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h4 class="font-bold text-slate-900 text-lg mb-4">Dividends & Rebates</h4>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex gap-2"><strong>Auto-Calculation:</strong> Based on pro-rata duration of deposits.</li>
+              <li class="flex gap-2"><strong>Withholding Tax:</strong> Auto-deduct 5% WHT for KRA.</li>
+              <li class="flex gap-2"><strong>Capitalization:</strong> Allow members to capitalize dividends to shares.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fosa" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16">
+      <div class="lg:col-span-4">
+        <div class="w-12 h-12 bg-green-500/20 text-green-400 rounded-xl flex items-center justify-center text-2xl mb-6">🏦</div>
+        <h2 class="text-3xl font-bold mb-4">FOSA Banking</h2>
+        <p class="text-slate-400 leading-relaxed mb-6">
+          Turn your Sacco into a fully functional bank. Manage liquidity, teller operations, and transactional accounts with Maker-Checker security.
+        </p>
+        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+          <h4 class="font-bold text-white mb-2">Treasury Management</h4>
+          <p class="text-sm text-slate-400">Track strong room cash, teller floats, and inter-teller transfers in real-time.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-8">
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+          <div>
+            <h4 class="font-bold text-white mb-2 border-b border-slate-700 pb-2">Savings Products</h4>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li>• Ordinary Savings / Current Accounts</li>
+              <li>• Fixed Deposit Accounts (with Cert Generation)</li>
+              <li>• Holiday / Junior / School Fees Accounts</li>
+              <li>• Call Deposits</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2 border-b border-slate-700 pb-2">Teller Operations</h4>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li>• Cash Withdrawal & Deposit (with Receipt printing)</li>
+              <li>• Cheque Deposit (Inward Clearing)</li>
+              <li>• Bankers Cheque Issuance</li>
+              <li>• Third-party Payments (KPLC/Water/Rent)</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2 border-b border-slate-700 pb-2">Salary Processing</h4>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li>• Bulk Salary Upload (Excel/CSV)</li>
+              <li>• Auto-deduction of Loan Repayments</li>
+              <li>• Standing Orders Execution</li>
+              <li>• Salary Advances / Overdrafts automation</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2 border-b border-slate-700 pb-2">ATM & Cards</h4>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li>• Sacco Link / Co-op Bank Integration</li>
+              <li>• Debit Card Ordering & Linking</li>
+              <li>• PIN Regeneration requests</li>
+              <li>• ATM Settlement Reconciliation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="accounting" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Financial Accounting (GL)</h2>
+        <p class="text-slate-500">Fully integrated General Ledger. No need for QuickBooks or Tally.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="border border-slate-100 p-8 rounded-3xl hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-lg text-slate-900 mb-4">Core Accounting</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li>• Chart of Accounts (Standard SASRA Format)</li>
+            <li>• Journal Entries & Voucher Posting</li>
+            <li>• Bank Reconciliation (Auto-match)</li>
+            <li>• Budgeting & Variance Analysis</li>
+          </ul>
+        </div>
+        
+        <div class="border border-slate-100 p-8 rounded-3xl hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-lg text-slate-900 mb-4">Payables & Receivables</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li>• Supplier/Vendor Management</li>
+            <li>• LPO Generation & Invoicing</li>
+            <li>• Expense Tracking & Petty Cash</li>
+            <li>• Withholding VAT Management</li>
+          </ul>
+        </div>
+
+        <div class="border border-slate-100 p-8 rounded-3xl hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-lg text-slate-900 mb-4">Fixed Assets</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li>• Asset Register & Tagging</li>
+            <li>• Depreciation Calculation (Straight/Reducing)</li>
+            <li>• Asset Disposal & Revaluation</li>
+            <li>• Maintenance Schedules</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Digital Channels & Mobility</h2>
+        <p class="text-slate-500 mb-8 text-lg">
+          Don't force members to visit the branch. Give them the Sacco in their pocket.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📲</div>
+             <div>
+               <h4 class="font-bold text-slate-900">M-Pesa Integration (C2B & B2C)</h4>
+               <p class="text-sm text-slate-500">Real-time deposit via Paybill. Instant Loan Disbursement and Dividends via B2C.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📱</div>
+             <div>
+               <h4 class="font-bold text-slate-900">Mobile App & USSD</h4>
+               <p class="text-sm text-slate-500">Members can check balances, request mini-statements, apply for mobile loans, and guarantee others via phone.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🌐</div>
+             <div>
+               <h4 class="font-bold text-slate-900">Member Web Portal</h4>
+               <p class="text-sm text-slate-500">Self-service portal for downloading statements, viewing loan schedules, and updating profiles.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative">
+        <div class="mx-auto bg-slate-900 rounded-[2.5rem] border-[10px] border-slate-900 shadow-2xl overflow-hidden w-[300px] h-[600px] relative">
+           <div class="h-full w-full bg-slate-800 flex flex-col">
+              <div class="h-32 bg-blue-600 p-6 text-white flex flex-col justify-end">
+                 <div class="text-sm opacity-80">Good Morning,</div>
+                 <div class="font-bold text-2xl">James Omondi</div>
+              </div>
+              <div class="flex-1 p-6 space-y-4">
+                 <div class="bg-white/10 p-4 rounded-xl">
+                    <div class="text-xs text-slate-400 uppercase">Savings Balance</div>
+                    <div class="text-xl font-bold text-white">KES 450,000</div>
+                 </div>
+                 <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-4 rounded-xl text-center text-white text-xs font-bold">Apply Loan</div>
+                    <div class="bg-slate-700 p-4 rounded-xl text-center text-white text-xs font-bold">Withdraw</div>
+                    <div class="bg-slate-700 p-4 rounded-xl text-center text-white text-xs font-bold">Guarantors</div>
+                    <div class="bg-slate-700 p-4 rounded-xl text-center text-white text-xs font-bold">Statement</div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compliance" class="py-24 px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="grid md:grid-cols-2 gap-16">
+        
+        <div>
+           <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+             <span class="text-3xl">⚖️</span> SASRA Compliance
+           </h3>
+           <p class="text-slate-500 mb-6">Automated generation of monthly and quarterly returns.</p>
+           <ul class="grid grid-cols-1 gap-3 text-sm font-mono text-slate-600 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+             <li>Form 1: Statement of Financial Position</li>
+             <li>Form 2: Statement of Comprehensive Income</li>
+             <li>Form 3: Statement of Deposit Return</li>
+             <li>Form 4: Capital Adequacy Return</li>
+             <li>Form 5: Liquidity Statement</li>
+             <li>Form 6: Investment Return</li>
+             <li>Risk Classification of Assets Provisioning</li>
+           </ul>
+        </div>
+
+        <div>
+           <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+             <span class="text-3xl">🔒</span> System Security
+           </h3>
+           <div class="space-y-6">
+             <div>
+               <h4 class="font-bold text-slate-900">Maker-Checker Principles</h4>
+               <p class="text-sm text-slate-500">Every critical action (Loan Approval, Expense Payment, JVs) requires an initiator and an approver.</p>
+             </div>
+             <div>
+               <h4 class="font-bold text-slate-900">Audit Trail</h4>
+               <p class="text-sm text-slate-500">Logs IP Address, User, Time, Previous Value, and New Value for every edit.</p>
+             </div>
+             <div>
+               <h4 class="font-bold text-slate-900">Data Backups</h4>
+               <p class="text-sm text-slate-500">Automated daily backups to 3 locations (Local, Cloud, DR Site).</p>
+             </div>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-900 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">This is the system your Sacco deserves.</h2>
+      <p class="text-xl text-slate-400 mb-12">Stop struggling with Excel and legacy systems. Switch to Talkin Tech today.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-500 transition-colors">
+          Request Full Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="bg-white/10 text-white border border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

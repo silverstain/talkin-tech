@@ -1,0 +1,140 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Contact Sales">
+
+  <style>
+    /* Background Map Style */
+    .bg-world-map {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/2000px-World_map_blank_without_borders.svg.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    /* Custom Select Chevron */
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 1rem center;
+      background-repeat: no-repeat;
+      background-size: 1.5em 1.5em;
+    }
+  </style>
+
+  <section class="min-h-screen bg-[#F8FAFC] flex items-center justify-center p-4 lg:p-10 pt-32 lg:pt-40 relative overflow-hidden">
+    
+    <div class="bg-world-map absolute inset-0 opacity-[0.03] pointer-events-none"></div>
+
+    <div class="max-w-[1400px] w-full bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/50 overflow-hidden border border-slate-100 flex flex-col lg:flex-row min-h-[700px]">
+      
+      <div class="lg:w-[45%] bg-slate-900 text-white p-12 lg:p-16 flex flex-col justify-between relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white text-[11px] font-bold uppercase tracking-widest mb-8 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            Sales Team Online
+          </div>
+          <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">Let's engineer your growth.</h1>
+          <p class="text-slate-400 text-lg leading-relaxed">
+            Ready to deploy Sacco Banking, Taxi Logistics, or Custom ERPs? Our engineers in Nairobi are ready to architect your solution.
+          </p>
+        </div>
+
+        <div class="relative z-10 space-y-8 mt-12">
+          <div class="flex items-center gap-6 group cursor-pointer">
+            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl group-hover:bg-blue-600 transition-colors">📍</div>
+            <div>
+              <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">HQ Location</div>
+              <div class="text-lg font-bold">Westlands, Nairobi</div>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-6 group cursor-pointer">
+            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl group-hover:bg-blue-600 transition-colors">📞</div>
+            <div>
+              <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Direct Line</div>
+              <div class="text-lg font-bold">+254 700 000 000</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6 group cursor-pointer">
+            <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl group-hover:bg-blue-600 transition-colors">📧</div>
+            <div>
+              <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Email</div>
+              <div class="text-lg font-bold">hello@talkintech.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 right-0 p-6 opacity-10 font-mono text-xs hidden lg:block text-right">
+          <p>connection.establish(&#123;</p>
+          <p>&nbsp;&nbsp;secure: true,</p>
+          <p>&nbsp;&nbsp;latency: "12ms"</p>
+          <p>&#125;);</p>
+        </div>
+      </div>
+
+      <div class="lg:w-[55%] p-12 lg:p-16 bg-white relative">
+        <h3 class="text-2xl font-bold text-slate-900 mb-8">Start a Project</h3>
+        
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">First Name</label>
+              <input type="text" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="John" />
+            </div>
+            <div class="space-y-2">
+              <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Last Name</label>
+              <input type="text" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="Doe" />
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Work Email</label>
+            <input type="email" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="john@company.com" />
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">I am interested in</label>
+              <select class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg cursor-pointer">
+                <option value="" disabled selected>Select a Product...</option>
+                <option value="sacco">Sacco Core Banking</option>
+                <option value="taxi">Taxi / Logistics App</option>
+                <option value="school">Smart School ERP</option>
+                <option value="hospital">MediFlow Hospital</option>
+                <option value="custom">Custom Engineering</option>
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Project Budget</label>
+              <select class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg cursor-pointer">
+                <option value="" disabled selected>Select Range...</option>
+                <option value="s">KES 100k - 500k</option>
+                <option value="m">KES 500k - 2M</option>
+                <option value="l">KES 2M - 5M</option>
+                <option value="xl">KES 5M+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Project Details</label>
+            <textarea rows="3" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg resize-none" placeholder="Tell us about your requirements..."></textarea>
+          </div>
+
+          <button type="button" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 active:scale-95 flex items-center justify-center gap-2 mt-4">
+            <span>🚀</span> Send Inquiry
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</MainLayout>

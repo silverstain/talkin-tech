@@ -1,0 +1,272 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Real Estate & Property Management System">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #3b82f6, #1d4ed8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+        Commercial • Residential • Malls
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        Automated Property <br />
+        <span class="text-gradient">Management.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-500 mb-10 leading-relaxed max-w-4xl mx-auto">
+        The complete ERP for Property Managers. Automate <strong>Rent Collection</strong>, <strong>Utility Billing</strong>, <strong>Lease Renewals</strong>, and <strong>Landlord Payouts</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#rent" class="bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30">
+          View Features
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
+          Download Brochure
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900">Rent Collection</div><div class="text-xs text-slate-500 uppercase">M-Pesa & Bank</div></div>
+        <div><div class="font-bold text-slate-900">Statements</div><div class="text-xs text-slate-500 uppercase">Auto-Generated</div></div>
+        <div><div class="font-bold text-slate-900">Utilities</div><div class="text-xs text-slate-500 uppercase">Water & Power</div></div>
+        <div><div class="font-bold text-slate-900">Accounting</div><div class="text-xs text-slate-500 uppercase">Double Entry</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/90 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#rent" class="hover:text-blue-600 transition-colors">Rent & Billing</a>
+      <a href="#accounting" class="hover:text-blue-600 transition-colors">Landlord Accounting</a>
+      <a href="#maintenance" class="hover:text-blue-600 transition-colors">Maintenance</a>
+      <a href="#tenant" class="hover:text-blue-600 transition-colors">Tenant Portal</a>
+    </div>
+  </div>
+
+  <section id="rent" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl mb-6">💰</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Smart Rent Collection</h2>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          Say goodbye to manual receipting. Our system identifies incoming M-Pesa payments and allocates them to the correct house and tenant instantly.
+        </p>
+        <div class="bg-green-50 p-6 rounded-2xl border border-green-100 mb-6">
+          <h4 class="font-bold text-green-900 mb-2">Automated Invoicing</h4>
+          <p class="text-sm text-green-700">On the 1st of every month, the system generates invoices for Rent, Water, Garbage, and Service Charge automatically.</p>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+            <span class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">✓</span> Metered Water Billing (Previous - Current Reading)
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+            <span class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">✓</span> Penalty Calculation for Late Payment
+          </li>
+          <li class="flex items-center gap-3 text-sm text-slate-700 font-medium">
+            <span class="w-5 h-5 rounded-full bg-slate-200 flex items-center justify-center text-xs">✓</span> Bulk SMS Reminders
+          </li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7">
+        <div class="bg-slate-900 rounded-2xl p-2 shadow-2xl">
+           <div class="bg-slate-800 rounded-xl p-8 border border-white/5">
+              <div class="flex justify-between items-center mb-8">
+                 <div class="text-white font-bold text-lg">Rent Roll (October)</div>
+                 <div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">Westlands Heights</div>
+              </div>
+              
+              <div class="grid grid-cols-3 gap-4 mb-8">
+                 <div class="bg-slate-700/50 p-4 rounded-lg">
+                    <div class="text-xs text-slate-400 uppercase">Target</div>
+                    <div class="text-xl font-bold text-white mt-1">4.5M</div>
+                 </div>
+                 <div class="bg-slate-700/50 p-4 rounded-lg">
+                    <div class="text-xs text-slate-400 uppercase">Collected</div>
+                    <div class="text-xl font-bold text-green-500 mt-1">3.8M</div>
+                 </div>
+                 <div class="bg-slate-700/50 p-4 rounded-lg">
+                    <div class="text-xs text-slate-400 uppercase">Arrears</div>
+                    <div class="text-xl font-bold text-red-500 mt-1">700k</div>
+                 </div>
+              </div>
+
+              <div class="space-y-3">
+                 <div class="flex items-center justify-between text-xs text-slate-400 border-b border-slate-700 pb-2">
+                    <span class="text-white font-bold">House A4</span>
+                    <span>John Kamau</span>
+                    <span class="text-green-400">PAID (M-Pesa)</span>
+                 </div>
+                 <div class="flex items-center justify-between text-xs text-slate-400 border-b border-slate-700 pb-2">
+                    <span class="text-white font-bold">House A5</span>
+                    <span>Mary Atieno</span>
+                    <span class="text-red-400">PENDING (5 days late)</span>
+                 </div>
+                 <div class="flex items-center justify-between text-xs text-slate-400 border-b border-slate-700 pb-2">
+                    <span class="text-white font-bold">House A6</span>
+                    <span>Patel Shah</span>
+                    <span class="text-green-400">PAID (Cheque)</span>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="accounting" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Landlord Management</h2>
+      <p class="text-slate-500 text-lg">Transparent reporting for Property Owners. Build trust with accurate payouts.</p>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="text-4xl mb-4">📉</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Expense Tracking</h3>
+        <p class="text-sm text-slate-500">Record expenses per property (Repairs, Caretaker Salary, Security). Upload receipts for transparency.</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="text-4xl mb-4">📑</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Landlord Statements</h3>
+        <p class="text-sm text-slate-500">Auto-generate monthly statements showing: Rent Collected - Commission - Expenses = Net Payout.</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div class="text-4xl mb-4">💼</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Commission Logic</h3>
+        <p class="text-sm text-slate-500">Set commission rates per property (e.g., 7% of Rent Collected). System deducts automatically before payout.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maintenance" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="relative">
+        <div class="bg-slate-900 rounded-[2.5rem] p-8 relative overflow-hidden shadow-2xl">
+           <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+           <div class="relative z-10">
+             <div class="flex justify-between items-end mb-8">
+                <div>
+                  <div class="text-xs text-slate-400 uppercase font-bold">Ticket #4092</div>
+                  <div class="text-2xl font-bold text-white">Leaking Sink</div>
+                </div>
+                <div class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">In Progress</div>
+             </div>
+             <div class="space-y-4">
+                <div class="bg-white/10 p-4 rounded-xl border border-white/5">
+                   <div class="text-xs text-slate-400 mb-1">Tenant Description</div>
+                   <div class="text-sm text-white">"Water is dripping under the kitchen sink. Cabinet is wet."</div>
+                </div>
+                <div class="bg-white/10 p-4 rounded-xl border border-white/5">
+                   <div class="text-xs text-slate-400 mb-1">Assigned Contractor</div>
+                   <div class="flex items-center gap-3 mt-1">
+                      <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-xs font-bold">JM</div>
+                      <div class="text-sm text-white font-bold">John Maina (Plumber)</div>
+                   </div>
+                </div>
+                <button class="w-full bg-green-600 text-white py-3 rounded-lg font-bold text-sm">Mark as Resolved</button>
+             </div>
+           </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Maintenance & Helpdesk</h2>
+        <p class="text-slate-500 mb-8 text-lg">
+          Don't let repair requests get lost in WhatsApp. Centralize all maintenance issues and track contractor performance.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🛠️</div>
+             <div>
+               <h4 class="font-bold text-slate-900">Job Cards</h4>
+               <p class="text-sm text-slate-500">Create digital job cards assigned to contractors. Track labor and material costs.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📷</div>
+             <div>
+               <h4 class="font-bold text-slate-900">Photo Evidence</h4>
+               <p class="text-sm text-slate-500">Tenants upload photos of damage. Contractors upload photos of the fix before payment.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🏗️</div>
+             <div>
+               <h4 class="font-bold text-slate-900">Asset Management</h4>
+               <p class="text-sm text-slate-500">Track warranty and service history for Lifts, Generators, and Pumps.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="tenant" class="py-24 px-6 bg-slate-900 text-white">
+    <div class="max-w-[1200px] mx-auto text-center">
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold mb-4">Tenant Portal & App</h2>
+        <p class="text-slate-400">Give your tenants a premium experience.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="p-6 border border-slate-700 rounded-2xl bg-slate-800">
+          <h3 class="font-bold mb-2">My Bills</h3>
+          <p class="text-sm text-slate-400">View current rent, water, and arrears breakdown.</p>
+        </div>
+        <div class="p-6 border border-slate-700 rounded-2xl bg-slate-800">
+          <h3 class="font-bold mb-2">Pay Online</h3>
+          <p class="text-sm text-slate-400">Instant M-Pesa push to pay rent. Auto-receipting.</p>
+        </div>
+        <div class="p-6 border border-slate-700 rounded-2xl bg-slate-800">
+          <h3 class="font-bold mb-2">Lease Info</h3>
+          <p class="text-sm text-slate-400">Download lease agreement and view expiry dates.</p>
+        </div>
+        <div class="p-6 border border-slate-700 rounded-2xl bg-slate-800">
+          <h3 class="font-bold mb-2">Report Issue</h3>
+          <p class="text-sm text-slate-400">Submit maintenance requests directly to the office.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Streamline your portfolio.</h2>
+      <p class="text-xl text-slate-500 mb-12">Stop using Excel. Switch to a professional Property Management System.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/30">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

@@ -1,0 +1,210 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Engineering Case Studies">
+
+  <style>
+    .reveal {
+      animation: reveal 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    @keyframes reveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <section class="pt-48 pb-20 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1000px] mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 text-[11px] font-bold uppercase tracking-widest mb-8 shadow-sm reveal">
+        Proven Track Record
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight reveal" style="animation-delay: 0.1s;">
+        Engineering <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">Case Studies.</span>
+      </h1>
+      <p class="text-xl text-slate-500 mb-12 leading-relaxed max-w-3xl mx-auto font-normal reveal" style="animation-delay: 0.2s;">
+        We don't just write code; we solve complex business problems. Here is how we helped leading African organizations scale their infrastructure.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-900 text-white overflow-hidden">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="order-2 lg:order-1">
+        <div class="flex items-center gap-4 mb-6">
+           <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-xl">🏦</div>
+           <div class="font-bold text-xl">Imarika Sacco</div>
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Digital Transformation for 40k Members.</h2>
+        
+        <div class="space-y-6 text-slate-400 leading-relaxed mb-8">
+          <p>
+            <strong class="text-white">The Challenge:</strong> The Sacco was relying on manual Excel reconciliation and an outdated desktop system. Loan processing took 3 weeks, and members had no visibility into their accounts.
+          </p>
+          <p>
+            <strong class="text-white">The Solution:</strong> We architected a cloud-native Core Banking System compliant with SASRA regulations. We built a middleware layer to connect their database securely to M-Pesa for instant disbursements.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-10">
+          <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-xs font-mono text-blue-400">Laravel</span>
+          <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-xs font-mono text-blue-400">Vue.js</span>
+          <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-xs font-mono text-blue-400">PostgreSQL</span>
+          <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-md text-xs font-mono text-blue-400">USSD</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 border-t border-slate-800 pt-6">
+          <div>
+            <div class="text-3xl font-bold text-white">45%</div>
+            <div class="text-xs text-slate-500 uppercase tracking-widest mt-1">Deposit Growth</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-green-500">2 Mins</div>
+            <div class="text-xs text-slate-500 uppercase tracking-widest mt-1">Loan Disbursement</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2 bg-slate-950 rounded-3xl p-8 border border-slate-800 relative shadow-2xl">
+         <div class="absolute inset-0 bg-blue-600/10 blur-[80px]"></div>
+         <div class="space-y-4 relative z-10 opacity-80">
+           <div class="flex justify-between items-center bg-slate-900 p-4 rounded-xl border border-slate-800">
+             <div class="h-2 w-24 bg-slate-700 rounded"></div>
+             <div class="h-2 w-8 bg-green-500 rounded"></div>
+           </div>
+           <div class="flex justify-between items-center bg-slate-900 p-4 rounded-xl border border-slate-800">
+             <div class="h-2 w-32 bg-slate-700 rounded"></div>
+             <div class="h-2 w-12 bg-blue-500 rounded"></div>
+           </div>
+           <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 mt-8 font-mono text-xs text-slate-500">
+             <p class="text-purple-400">Processing Loan ID #8821...</p>
+             <p class="mt-2 text-blue-400">> Credit Score Check: PASS</p>
+             <p class="mt-2 text-blue-400">> Guarantor Check: PASS</p>
+             <p class="mt-2 text-green-400">> Disbursing via M-Pesa...</p>
+           </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 relative shadow-lg">
+         <div class="aspect-square bg-white rounded-2xl border border-slate-100 relative overflow-hidden flex items-center justify-center">
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+            <div class="text-center">
+               <div class="text-6xl mb-4">📍</div>
+               <div class="text-slate-900 font-bold text-xl">Real-Time Dispatch</div>
+               <div class="text-slate-400 text-sm">Latency: 120ms</div>
+            </div>
+            <div class="absolute top-10 left-10 bg-white p-3 rounded-lg shadow-md text-xs font-bold text-slate-700 flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span> Driver Found
+            </div>
+            <div class="absolute bottom-10 right-10 bg-slate-900 text-white p-3 rounded-lg shadow-md text-xs font-bold flex items-center gap-2">
+              KES 450.00 <span class="text-slate-400">| Paid</span>
+            </div>
+         </div>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+           <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-xl">🚖</div>
+           <div class="font-bold text-xl text-slate-900">Pwani Cabs</div>
+        </div>
+        
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Automating Logistics for a 200-Car Fleet.</h2>
+        
+        <div class="space-y-6 text-slate-500 leading-relaxed mb-8">
+          <p>
+            <strong>The Challenge:</strong> Managing 200 drivers via WhatsApp and phone calls was chaotic. Drivers were stealing clients, and revenue leakage was over 30%.
+          </p>
+          <p>
+            <strong>The Solution:</strong> We deployed a white-label version of our Taxi Solution. It includes an Admin Panel for dispatch, a Driver App with wallet logic, and a Passenger App for booking.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-10">
+          <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Flutter</span>
+          <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Google Maps API</span>
+          <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Node.js</span>
+          <span class="px-3 py-1 bg-slate-100 border border-slate-200 rounded-md text-xs font-mono text-slate-600">Socket.io</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 border-t border-slate-100 pt-6">
+          <div>
+            <div class="text-3xl font-bold text-slate-900">100%</div>
+            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Automated Dispatch</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-indigo-600">30%</div>
+            <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Revenue Recovered</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-50 border-y border-slate-200">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        
+        <div>
+          <div class="flex items-center gap-4 mb-6">
+             <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-xl">🎓</div>
+             <div class="font-bold text-xl text-slate-900">Elite Group of Schools</div>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Unified ERP for 3 Campuses.</h2>
+          <p class="text-slate-500 leading-relaxed mb-6">
+            We consolidated three different campuses onto a single database. The finance team can now view real-time fee collection across all branches, and parents receive automated SMS reminders for balances.
+          </p>
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <h4 class="font-bold text-slate-900 mb-2">Key Modules Deployed:</h4>
+            <ul class="grid grid-cols-2 gap-2 text-sm text-slate-500">
+              <li class="flex items-center gap-2"><span class="text-orange-500">✓</span> Finance & Billing</li>
+              <li class="flex items-center gap-2"><span class="text-orange-500">✓</span> Exam Grading</li>
+              <li class="flex items-center gap-2"><span class="text-orange-500">✓</span> Transport Mgmt</li>
+              <li class="flex items-center gap-2"><span class="text-orange-500">✓</span> E-Learning Portal</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 text-white p-10 rounded-3xl relative overflow-hidden">
+           <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+           <div class="relative z-10">
+             <div class="font-mono text-sm text-orange-300 mb-4">// System Architecture</div>
+             <div class="space-y-4 border-l-2 border-slate-700 pl-6">
+               <div>
+                 <div class="font-bold">Frontend</div>
+                 <div class="text-slate-400 text-sm">React.js (Admin) + Flutter (Parents App)</div>
+               </div>
+               <div>
+                 <div class="font-bold">Backend</div>
+                 <div class="text-slate-400 text-sm">Laravel API + MySQL Cluster</div>
+               </div>
+               <div>
+                 <div class="font-bold">Integrations</div>
+                 <div class="text-slate-400 text-sm">KRA iTax, M-Pesa, Bulk SMS</div>
+               </div>
+             </div>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-white text-center">
+    <h2 class="text-3xl font-bold text-slate-900 mb-8">Have a complex project?</h2>
+    <a href="/contact" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-600 transition-colors shadow-lg hover:shadow-blue-600/20">
+      Consult an Engineer
+    </a>
+  </section>
+
+</MainLayout>
