@@ -1,0 +1,427 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="HR & Payroll Management System (Enterprise)">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #0891b2, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+
+    /* Solid Button Styles for better visibility */
+    .btn-secondary {
+        background-color: white;
+        color: #0f172a; /* Slate 900 */
+        border: 2px solid #e2e8f0; /* Slate 200 */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .btn-secondary:hover {
+        border-color: #06b6d4; /* Cyan 500 */
+        color: #0891b2; /* Cyan 600 */
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+        SHIF Compliant • Housing Levy Ready
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        The Gold Standard for <br />
+        <span class="text-gradient">Kenyan Payroll.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        Don't risk penalties. An end-to-end HR platform that automates <strong>Complex Payrolls</strong>, <strong>Statutory Returns</strong>, <strong>Staff Loans</strong>, and <strong>Performance Appraisals</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#payroll" class="bg-cyan-700 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-800 transition-all shadow-xl shadow-cyan-900/10">
+          View Payroll Features
+        </a>
+        <a href="/contact" class="btn-secondary px-10 py-5 rounded-xl font-bold text-lg transition-all">
+          Download Brochure
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">KRA iTax</div><div class="text-xs text-slate-500 uppercase font-bold">P9 & CSV Returns</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Bank Files</div><div class="text-xs text-slate-500 uppercase font-bold">EFT Automation</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Biometrics</div><div class="text-xs text-slate-500 uppercase font-bold">Attendance Sync</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Mobile App</div><div class="text-xs text-slate-500 uppercase font-bold">iOS & Android</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#payroll" class="hover:text-cyan-700 transition-colors">Payroll Processing</a>
+      <a href="#loans" class="hover:text-cyan-700 transition-colors">Loans & Advances</a>
+      <a href="#compliance" class="hover:text-cyan-700 transition-colors">Compliance</a>
+      <a href="#recruitment" class="hover:text-cyan-700 transition-colors">Recruitment</a>
+      <a href="#performance" class="hover:text-cyan-700 transition-colors">Performance</a>
+    </div>
+  </div>
+
+  <section id="payroll" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-cyan-100 text-cyan-700 rounded-xl flex items-center justify-center text-2xl mb-6">💸</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Error-Free Payroll Engine</h2>
+        <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+          Process salaries for 10 or 10,000 employees in minutes. The system handles complex formulas, reliefs, and multi-currency logic effortlessly.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="bg-cyan-50 p-5 rounded-xl border border-cyan-100">
+             <h4 class="font-bold text-cyan-900 text-sm mb-1">One-Click Bank Files</h4>
+             <p class="text-sm text-cyan-800">Forget manual Excel work. We generate the specific .txt or .csv file format for <strong>Co-op, Equity, KCB, NCBA, StanChart, and Absa</strong> for bulk processing.</p>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-cyan-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Complex Formulas</strong>
+                <p class="text-sm text-slate-500">Configurable logic for Overtime (1.5x, 2.0x), Absenteeism Deductions, and Acting Allowances.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-cyan-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Multi-Currency</strong>
+                <p class="text-sm text-slate-500">Pay expats in USD while paying locals in KES. System handles exchange rates for tax calculation.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-cyan-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Arrears Processing</strong>
+                <p class="text-sm text-slate-500">Backdated salary increments? System auto-calculates tax arrears for previous months.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="bg-slate-900 rounded-2xl p-3 shadow-2xl">
+           <div class="bg-white rounded-xl p-8 border border-slate-200 relative overflow-hidden">
+              <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03]">
+                 <div class="text-8xl font-bold -rotate-45 text-black">PAYSLIP</div>
+              </div>
+              
+              <div class="flex justify-between items-start mb-8 pb-4 border-b border-slate-200">
+                 <div>
+                    <div class="text-xl font-bold text-slate-900">Talkin Tech Ltd</div>
+                    <div class="text-xs text-slate-500 font-bold">P.O. Box 1234, Nairobi</div>
+                 </div>
+                 <div class="text-right">
+                    <div class="text-sm font-bold text-slate-900">PAYSLIP: JAN 2026</div>
+                    <div class="text-xs text-slate-500 font-bold">John Doe (EMP-0042)</div>
+                 </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-8 mb-6">
+                 <div>
+                    <div class="text-xs font-bold text-slate-400 uppercase mb-2">Earnings</div>
+                    <div class="space-y-2 text-sm">
+                       <div class="flex justify-between text-slate-700"><span>Basic Salary</span> <span class="font-mono font-bold">150,000.00</span></div>
+                       <div class="flex justify-between text-slate-700"><span>House Allowance</span> <span class="font-mono font-bold">30,000.00</span></div>
+                       <div class="flex justify-between text-slate-700"><span>Transport</span> <span class="font-mono font-bold">10,000.00</span></div>
+                       <div class="flex justify-between text-slate-900 font-bold pt-2 border-t border-slate-100"><span>Gross Pay</span> <span class="font-mono">190,000.00</span></div>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="text-xs font-bold text-slate-400 uppercase mb-2">Deductions</div>
+                    <div class="space-y-2 text-sm">
+                       <div class="flex justify-between text-slate-700"><span>PAYE (Auto)</span> <span class="font-mono text-red-600 font-bold">48,230.00</span></div>
+                       <div class="flex justify-between text-slate-700"><span>SHIF (2.75%)</span> <span class="font-mono text-red-600 font-bold">5,225.00</span></div>
+                       <div class="flex justify-between text-slate-700"><span>NSSF (Tier II)</span> <span class="font-mono text-red-600 font-bold">2,160.00</span></div>
+                       <div class="flex justify-between text-slate-700"><span>Housing Levy</span> <span class="font-mono text-red-600 font-bold">2,850.00</span></div>
+                       <div class="flex justify-between text-slate-900 font-bold pt-2 border-t border-slate-100"><span>Total Ded.</span> <span class="font-mono">58,465.00</span></div>
+                    </div>
+                 </div>
+              </div>
+
+              <div class="bg-cyan-50 p-4 rounded-lg flex justify-between items-center border border-cyan-200">
+                 <span class="font-bold text-cyan-900 uppercase text-sm">Net Pay</span>
+                 <span class="font-bold text-2xl text-cyan-700 font-mono">KES 131,535.00</span>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="loans" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
+         <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-xl font-bold">L</div>
+            <div>
+               <h3 class="font-bold text-slate-900 text-lg">Loan Amortization</h3>
+               <p class="text-xs text-slate-500 font-bold">Reducing Balance Method</p>
+            </div>
+         </div>
+         <div class="space-y-3 font-mono text-xs">
+            <div class="flex justify-between bg-slate-50 p-3 rounded border border-slate-100 text-slate-700">
+               <span>Principal</span>
+               <span class="font-bold">KES 500,000</span>
+            </div>
+            <div class="flex justify-between bg-slate-50 p-3 rounded border border-slate-100 text-slate-700">
+               <span>Interest Rate</span>
+               <span class="font-bold">12% p.a</span>
+            </div>
+            <div class="mt-4 border-t border-slate-200 pt-2">
+               <div class="grid grid-cols-4 text-slate-500 font-bold mb-2">
+                  <div>Month</div>
+                  <div>Inst.</div>
+                  <div>Int.</div>
+                  <div>Bal.</div>
+               </div>
+               <div class="grid grid-cols-4 text-slate-700 mb-2 border-b border-slate-50 pb-2">
+                  <div class="font-bold">Jan</div>
+                  <div>45k</div>
+                  <div>5k</div>
+                  <div>460k</div>
+               </div>
+               <div class="grid grid-cols-4 text-slate-700 mb-2 border-b border-slate-50 pb-2">
+                  <div class="font-bold">Feb</div>
+                  <div>45k</div>
+                  <div>4.6k</div>
+                  <div>419k</div>
+               </div>
+               <div class="grid grid-cols-4 text-slate-700 mb-2">
+                  <div class="font-bold">Mar</div>
+                  <div>45k</div>
+                  <div>4.2k</div>
+                  <div>378k</div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Staff Loans & Advances</h2>
+        <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+          Manage company loans, salary advances, and Sacco check-offs without using spreadsheets. The system auto-stops deductions when the loan is cleared.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📉</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Company Loans</h4>
+               <p class="text-sm text-slate-500">Set interest rates (Low Interest Benefit Tax is auto-calculated if rate is below market). Define repayment period.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🏦</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Sacco & Bank Check-offs</h4>
+               <p class="text-sm text-slate-500">Manage third-party deductions. Generate a remittance schedule for the Sacco/Bank automatically.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-xl flex-shrink-0">⚡</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Mid-Month Advances</h4>
+               <p class="text-sm text-slate-500">Employees request advances via App. Approved amount is auto-recovered from end-month salary.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="compliance" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">100% Statutory Compliance</h2>
+      <p class="text-slate-500 text-lg">We update the system whenever the Finance Act changes. You don't lift a finger.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6 max-w-[1200px] mx-auto">
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center group hover:border-red-400 transition-colors">
+        <div class="text-2xl font-bold text-slate-900 mb-2">PAYE</div>
+        <p class="text-sm text-slate-500 mb-4">Auto-configured graduated tax bands with personal relief & insurance relief.</p>
+        <span class="text-xs font-bold text-red-600 bg-red-50 px-3 py-1 rounded-full border border-red-100">P9 Form Ready</span>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center group hover:border-blue-400 transition-colors">
+        <div class="text-2xl font-bold text-slate-900 mb-2">SHIF / NHIF</div>
+        <p class="text-sm text-slate-500 mb-4">Social Health Insurance Fund (2.75%) calculation logic.</p>
+        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">Excel Return Ready</span>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center group hover:border-orange-400 transition-colors">
+        <div class="text-2xl font-bold text-slate-900 mb-2">NSSF</div>
+        <p class="text-sm text-slate-500 mb-4">Tier I and Tier II calculations based on current government limits.</p>
+        <span class="text-xs font-bold text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-100">By-Product Ready</span>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center group hover:border-green-400 transition-colors">
+        <div class="text-2xl font-bold text-slate-900 mb-2">Housing Levy</div>
+        <p class="text-sm text-slate-500 mb-4">1.5% Employer and Employee contribution logic.</p>
+        <span class="text-xs font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full border border-green-100">Compliance Check</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="recruitment" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Recruitment & Onboarding</h2>
+        <p class="text-slate-500 mb-8 text-lg">
+          Transform your hiring process. Post jobs, track applicants, and onboard new hires digitally without printing a single paper.
+        </p>
+        
+        <div class="grid gap-6">
+           <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+             <h4 class="font-bold text-slate-900 mb-2">Applicant Tracking System (ATS)</h4>
+             <p class="text-sm text-slate-600">Create job requisitions. Applicants apply via a branded portal. Sort by experience, education, or skills automatically.</p>
+           </div>
+           <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+             <h4 class="font-bold text-slate-900 mb-2">Digital Onboarding</h4>
+             <p class="text-sm text-slate-600">New hires upload their ID, KRA Pin, NSSF, and NHIF cards directly to the system before their first day.</p>
+           </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-lg">
+         <div class="flex gap-4 overflow-x-auto pb-2">
+            <div class="w-48 flex-shrink-0">
+               <div class="text-xs font-bold text-slate-500 uppercase mb-3">Applied (12)</div>
+               <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 mb-2">
+                  <div class="font-bold text-slate-800 text-sm">John Kamau</div>
+                  <div class="text-xs text-slate-400">Senior Dev</div>
+               </div>
+               <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 mb-2">
+                  <div class="font-bold text-slate-800 text-sm">Sarah O.</div>
+                  <div class="text-xs text-slate-400">Accountant</div>
+               </div>
+            </div>
+            <div class="w-48 flex-shrink-0">
+               <div class="text-xs font-bold text-cyan-600 uppercase mb-3">Interview (4)</div>
+               <div class="bg-cyan-50 p-3 rounded-lg border border-cyan-100 mb-2 shadow-sm">
+                  <div class="font-bold text-slate-800 text-sm">Kevin M.</div>
+                  <div class="text-xs text-slate-500">Scheduled: 2 PM</div>
+               </div>
+               <div class="bg-cyan-50 p-3 rounded-lg border border-cyan-100 mb-2 shadow-sm">
+                  <div class="font-bold text-slate-800 text-sm">Lucy W.</div>
+                  <div class="text-xs text-slate-500">Scheduled: 4 PM</div>
+               </div>
+            </div>
+            <div class="w-48 flex-shrink-0">
+               <div class="text-xs font-bold text-green-600 uppercase mb-3">Hired (1)</div>
+               <div class="bg-green-50 p-3 rounded-lg border border-green-100 mb-2 shadow-sm">
+                  <div class="font-bold text-slate-800 text-sm">David K.</div>
+                  <div class="text-xs text-green-700 font-bold">Offer Accepted</div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="performance" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-white mb-6">Performance & Discipline</h2>
+        <p class="text-slate-400 mb-8 text-lg">
+          Move beyond just paying people. Manage their growth and conduct within the same system.
+        </p>
+        
+        <div class="space-y-8">
+          <div>
+             <h4 class="font-bold text-white text-lg">360° Appraisal (KPIs)</h4>
+             <p class="text-sm text-slate-400 mt-2">Set Key Performance Indicators at the start of the year. Supervisors score employees quarterly. System creates a weighted average score.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-white text-lg">Disciplinary Tracking</h4>
+             <p class="text-sm text-slate-400 mt-2">Log verbal warnings, show cause letters, and suspensions. Store scanned copies of signed warning letters.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="bg-slate-800 rounded-[2.5rem] p-8 border border-slate-700 shadow-2xl">
+           <div class="mb-6">
+              <div class="text-xs text-slate-400 uppercase font-bold mb-2">Employee Scorecard</div>
+              <div class="flex items-center gap-4">
+                 <div class="w-16 h-16 rounded-full border-4 border-green-500 flex items-center justify-center text-xl font-bold text-white">88%</div>
+                 <div>
+                    <div class="font-bold text-lg text-white">High Performer</div>
+                    <div class="text-xs text-slate-400">Bonus Eligible</div>
+                 </div>
+              </div>
+           </div>
+           
+           <div class="space-y-3">
+              <div class="bg-slate-900 p-4 rounded-xl border border-slate-700">
+                 <div class="flex justify-between text-sm mb-2 text-slate-300">
+                    <span>Target Achievement</span>
+                    <span class="text-green-500 font-bold">92%</span>
+                 </div>
+                 <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-green-500 h-full w-[92%]"></div>
+                 </div>
+              </div>
+              <div class="bg-slate-900 p-4 rounded-xl border border-slate-700">
+                 <div class="flex justify-between text-sm mb-2 text-slate-300">
+                    <span>Attendance</span>
+                    <span class="text-yellow-500 font-bold">75%</span>
+                 </div>
+                 <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-yellow-500 h-full w-[75%]"></div>
+                 </div>
+              </div>
+              <div class="bg-slate-900 p-4 rounded-xl border border-slate-700">
+                 <div class="flex justify-between text-sm mb-2 text-slate-300">
+                    <span>Teamwork</span>
+                    <span class="text-green-500 font-bold">95%</span>
+                 </div>
+                 <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-green-500 h-full w-[95%]"></div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-cyan-900 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Make Payroll Painless.</h2>
+      <p class="text-xl text-cyan-100 mb-12">Ensure compliance and happy employees with Talkin Tech HR.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-white text-cyan-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-50 transition-colors shadow-lg">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="bg-cyan-800 text-white border border-cyan-700 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-700 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

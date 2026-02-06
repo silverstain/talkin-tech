@@ -1,0 +1,324 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Courier & Logistics Management System">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #475569, #1e293b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-slate-200 border border-slate-300 text-slate-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-slate-600 animate-pulse"></span>
+        Last Mile • Hub-to-Hub • International
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        Next-Gen Logistics <br />
+        <span class="text-gradient">Infrastructure.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        The complete operating system for courier companies. Automate <strong>Waybill Generation</strong>, <strong>Rider Dispatch</strong>, <strong>Warehousing</strong>, and <strong>SMS Notifications</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#tracking" class="bg-slate-900 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/20">
+          View Tracking Demo
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-200 px-10 py-5 rounded-xl font-bold text-lg hover:border-slate-900 hover:bg-slate-50 transition-all shadow-sm">
+          Download Brochure
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">Waybills</div><div class="text-xs text-slate-500 uppercase font-bold">Auto-Generated</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Rider App</div><div class="text-xs text-slate-500 uppercase font-bold">Live GPS</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Customers</div><div class="text-xs text-slate-500 uppercase font-bold">Booking Portal</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Proof</div><div class="text-xs text-slate-500 uppercase font-bold">Digital Signature</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#tracking" class="hover:text-slate-900 transition-colors">Track & Trace</a>
+      <a href="#operations" class="hover:text-slate-900 transition-colors">Hub Operations</a>
+      <a href="#rider" class="hover:text-slate-900 transition-colors">Rider App</a>
+      <a href="#portal" class="hover:text-slate-900 transition-colors">Customer Portal</a>
+    </div>
+  </div>
+
+  <section id="tracking" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-xl flex items-center justify-center text-2xl mb-6">📍</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Real-Time Visibility</h2>
+        <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+          Give your customers peace of mind. They can track their parcel from pickup to delivery using a unique Waybill Number on your website.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 text-sm mb-1">SMS Notifications</h4>
+             <p class="text-sm text-slate-600">System sends auto-SMS at every stage: <br/> "Your parcel <strong>WB-9021</strong> has been picked up." <br/> "Rider John is arriving."</p>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Status Timeline</strong>
+                <p class="text-sm text-slate-500">Pickup -> In Transit -> At Hub -> Out for Delivery -> Delivered.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Estimated Time of Arrival (ETA)</strong>
+                <p class="text-sm text-slate-500">Calculated based on Rider GPS location and traffic data.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="bg-slate-900 rounded-2xl p-3 shadow-2xl">
+           <div class="bg-white rounded-xl p-8 border border-slate-200 relative overflow-hidden">
+              
+              <div class="mb-8 border-b border-slate-100 pb-4">
+                 <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Tracking Number</div>
+                 <div class="text-2xl font-bold text-slate-900 font-mono">KE-8842-XJ</div>
+              </div>
+
+              <div class="space-y-8 relative">
+                 <div class="absolute left-[15px] top-2 bottom-2 w-0.5 bg-slate-200 -z-10"></div>
+
+                 <div class="flex gap-6">
+                    <div class="w-8 h-8 rounded-full bg-green-500 border-4 border-white shadow-sm flex-shrink-0"></div>
+                    <div>
+                       <div class="font-bold text-slate-900">Delivered</div>
+                       <div class="text-xs text-slate-500">Received by: James K. (Gate)</div>
+                       <div class="text-xs text-slate-400 mt-1">Today, 2:30 PM</div>
+                    </div>
+                 </div>
+
+                 <div class="flex gap-6">
+                    <div class="w-8 h-8 rounded-full bg-slate-200 border-4 border-white shadow-sm flex-shrink-0"></div>
+                    <div>
+                       <div class="font-bold text-slate-900">Out for Delivery</div>
+                       <div class="text-xs text-slate-500">Rider: Peter Mwangi</div>
+                       <div class="text-xs text-slate-400 mt-1">Today, 9:15 AM</div>
+                    </div>
+                 </div>
+
+                 <div class="flex gap-6">
+                    <div class="w-8 h-8 rounded-full bg-slate-200 border-4 border-white shadow-sm flex-shrink-0"></div>
+                    <div>
+                       <div class="font-bold text-slate-900">Arrived at Mombasa Road Hub</div>
+                       <div class="text-xs text-slate-500">Sorted for Westlands Route</div>
+                       <div class="text-xs text-slate-400 mt-1">Yesterday, 8:00 PM</div>
+                    </div>
+                 </div>
+              </div>
+
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="operations" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
+         <div class="flex items-center justify-between mb-6">
+            <h3 class="font-bold text-slate-900 text-lg">Waybill Generator</h3>
+            <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded text-xs font-bold">Auto-Print</span>
+         </div>
+         
+         <div class="space-y-4 border-2 border-dashed border-slate-200 p-4 rounded-xl bg-slate-50">
+            <div class="flex justify-between border-b border-slate-200 pb-2">
+               <div>
+                  <div class="text-[10px] text-slate-400 uppercase">From</div>
+                  <div class="font-bold text-sm">Nairobi CBD</div>
+               </div>
+               <div class="text-right">
+                  <div class="text-[10px] text-slate-400 uppercase">To</div>
+                  <div class="font-bold text-sm">Kisumu (Branch A)</div>
+               </div>
+            </div>
+            <div class="flex justify-center py-4">
+               <div class="flex flex-col items-center">
+                  <div class="h-12 w-48 bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVQ4T2NkAAIAAA0AA4v5JqaAAAAAElFTkSuQmCC')] bg-repeat-x opacity-80"></div>
+                  <div class="font-mono text-xs mt-1 tracking-widest">WB-1920392</div>
+               </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+               <div>
+                  <div class="text-[10px] text-slate-400 uppercase">Weight</div>
+                  <div class="font-bold text-sm">5.2 KG</div>
+               </div>
+               <div>
+                  <div class="text-[10px] text-slate-400 uppercase">Payment</div>
+                  <div class="font-bold text-sm text-green-600">PAID (M-Pesa)</div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Hub & Operations</h2>
+        <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+          Manage the chaos of a busy logistics hub. Generate waybills, scan items in/out, and manage manifests for inter-city trucks.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📦</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Manifest Management</h4>
+               <p class="text-sm text-slate-500">Group 50 parcels into one "Manifest" for a truck going to Mombasa. Scan the Manifest to load all 50 items at once.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🖨️</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Thermal Printing</h4>
+               <p class="text-sm text-slate-500">Compatible with Xprinter/Zebra thermal printers for sticky waybill labels with QR codes.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-slate-200 text-slate-700 rounded-lg flex items-center justify-center text-xl flex-shrink-0">💰</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Cash on Delivery (COD)</h4>
+               <p class="text-sm text-slate-500">Track COD parcels. Rider app prompts for payment collection before marking as delivered.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="rider" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-white mb-6">The Rider Companion</h2>
+        <p class="text-slate-400 mb-8 text-lg">
+          Equip your field team with a powerful Android app. No more paper runsheets.
+        </p>
+        
+        <div class="space-y-8">
+          <div>
+             <h4 class="font-bold text-white text-lg">Optimized Routes</h4>
+             <p class="text-sm text-slate-400 mt-2">App sorts deliveries by location proximity. Integration with Google Maps for turn-by-turn navigation.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-white text-lg">Digital Proof of Delivery (POD)</h4>
+             <p class="text-sm text-slate-400 mt-2">Customer signs on the rider's phone screen (Sign-on-Glass). Rider can also take a photo of the ID or Gate Pass.</p>
+          </div>
+          <div>
+             <h4 class="font-bold text-white text-lg">Offline Mode</h4>
+             <p class="text-sm text-slate-400 mt-2">Rider can complete deliveries in basements or remote areas. Data syncs when internet is restored.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center">
+        <div class="w-[300px] h-[600px] bg-slate-800 rounded-[3rem] border-[8px] border-slate-950 shadow-2xl relative overflow-hidden">
+           <div class="absolute inset-0 bg-white flex flex-col">
+              <div class="bg-slate-900 h-24 p-6 flex items-end justify-between text-white">
+                 <div class="font-bold text-lg">My Task List</div>
+                 <div class="text-xs bg-slate-700 px-2 py-1 rounded">5 Pending</div>
+              </div>
+              <div class="flex-1 p-4 space-y-3 bg-slate-50 overflow-y-auto">
+                 <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                       <div class="font-bold text-slate-900">Deliver: Laptop</div>
+                       <span class="text-xs bg-orange-100 text-orange-600 font-bold px-2 py-1 rounded">COD</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-3">
+                       📍 Westlands Square, 3rd Floor<br>
+                       👤 Jane K. (0722...)
+                    </div>
+                    <button class="w-full bg-slate-900 text-white py-2 rounded-lg text-xs font-bold">Complete Delivery</button>
+                 </div>
+                 <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm opacity-60">
+                    <div class="flex justify-between items-start mb-2">
+                       <div class="font-bold text-slate-900">Pick: Documents</div>
+                       <span class="text-xs bg-blue-100 text-blue-600 font-bold px-2 py-1 rounded">Express</span>
+                    </div>
+                    <div class="text-xs text-slate-500 mb-3">
+                       📍 Upper Hill, Britam Tower<br>
+                       👤 Lawyer Mike
+                    </div>
+                    <button class="w-full bg-slate-200 text-slate-500 py-2 rounded-lg text-xs font-bold">Navigate</button>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="portal" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Corporate Booking Portal</h2>
+      <p class="text-slate-500 text-lg">Allow your B2B clients to book deliveries in bulk.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-slate-400 transition-colors">
+        <div class="text-4xl mb-4">📤</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Bulk Upload</h3>
+        <p class="text-sm text-slate-500">Clients upload an Excel file with 100 destinations. System generates 100 Waybills instantly.</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-slate-400 transition-colors">
+        <div class="text-4xl mb-4">📒</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Address Book</h3>
+        <p class="text-sm text-slate-500">Save frequent locations (e.g. "Branch Office"). Quick-select for rapid booking.</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:border-slate-400 transition-colors">
+        <div class="text-4xl mb-4">💳</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Monthly Invoicing</h3>
+        <p class="text-sm text-slate-500">For corporate clients, generate a consolidated end-of-month invoice for all deliveries done.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Scale your Logistics Business.</h2>
+      <p class="text-xl text-slate-400 mb-12">Stop losing parcels and customers. Upgrade to professional logistics software.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-white text-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-200 transition-colors shadow-lg">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

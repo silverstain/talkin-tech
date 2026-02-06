@@ -1,0 +1,310 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="ISP & WiFi Hotspot Billing System">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #0ea5e9, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        MikroTik API • Radius Server • PPPoE & Hotspot
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        Automate your <br />
+        <span class="text-gradient">Internet Business.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        The ultimate billing engine for ISPs. Customers pay via M-Pesa, and the system <strong>automatically reconnects</strong> their internet in 5 seconds. No manual intervention required.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#features" class="bg-slate-900 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/20">
+          View Features
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+          Get Pricing
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">M-Pesa</div><div class="text-xs text-slate-500 uppercase font-bold">Auto-Reconnect</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">MikroTik</div><div class="text-xs text-slate-500 uppercase font-bold">Full Integration</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">SMS</div><div class="text-xs text-slate-500 uppercase font-bold">Expiry Alerts</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Resellers</div><div class="text-xs text-slate-500 uppercase font-bold">Agent Portal</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#pppoe" class="hover:text-blue-600 transition-colors">Home Fiber (PPPoE)</a>
+      <a href="#hotspot" class="hover:text-blue-600 transition-colors">WiFi Hotspot</a>
+      <a href="#network" class="hover:text-blue-600 transition-colors">Network Control</a>
+      <a href="#finance" class="hover:text-blue-600 transition-colors">Billing & Finance</a>
+    </div>
+  </div>
+
+  <section id="pppoe" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6">🏠</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Home Fiber Management</h2>
+        <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+          Manage monthly subscribers effortlessly. The system handles recurring billing, expiration dates, and bandwidth throttling.
+        </p>
+        
+        <div class="space-y-6">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-blue-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Automated Invoicing</strong>
+                <p class="text-sm text-slate-500">Invoices generated 3 days before expiry. SMS reminders sent automatically.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-blue-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Grace Periods</strong>
+                <p class="text-sm text-slate-500">Configure "Soft Disconnect" (throttle speed) or "Hard Disconnect" after expiry.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-blue-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Client Portal</strong>
+                <p class="text-sm text-slate-500">Clients can log in to check data usage, change packages, and view payment history.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="bg-slate-900 rounded-2xl p-3 shadow-2xl">
+           <div class="bg-white rounded-xl p-8 border border-slate-200 relative overflow-hidden">
+              <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                 <div>
+                    <div class="text-xl font-bold text-slate-900">John Doe</div>
+                    <div class="text-xs text-slate-500">Acc: 10042 • IP: 192.168.88.14</div>
+                 </div>
+                 <div class="bg-green-100 text-green-700 px-3 py-1 rounded text-xs font-bold flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Online
+                 </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                 <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Current Plan</div>
+                    <div class="text-lg font-bold text-blue-700">10 Mbps Unlimited</div>
+                    <div class="text-xs text-slate-400">Exp: 14th Feb 2026</div>
+                 </div>
+                 <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <div class="text-xs text-slate-500 uppercase font-bold mb-1">Data Usage</div>
+                    <div class="text-lg font-bold text-slate-900">420 GB</div>
+                    <div class="text-xs text-slate-400">Download: 380GB • Upload: 40GB</div>
+                 </div>
+              </div>
+
+              <div class="h-24 bg-slate-50 rounded-xl border border-slate-100 relative overflow-hidden flex items-end px-2 gap-1">
+                 <div class="w-1/12 bg-blue-300 h-1/3 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-400 h-2/3 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-500 h-1/2 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-600 h-3/4 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-500 h-full rounded-t"></div>
+                 <div class="w-1/12 bg-blue-400 h-2/3 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-300 h-1/2 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-400 h-3/4 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-500 h-2/3 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-600 h-1/2 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-500 h-1/3 rounded-t"></div>
+                 <div class="w-1/12 bg-blue-400 h-1/4 rounded-t"></div>
+              </div>
+              <div class="text-xs text-center text-slate-400 mt-2">Live Traffic (Last 24hrs)</div>
+
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hotspot" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="relative flex justify-center">
+        <div class="w-[300px] h-[600px] bg-slate-900 rounded-[3rem] border-[8px] border-slate-800 shadow-2xl relative overflow-hidden">
+           <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
+              <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
+           </div>
+           
+           <div class="absolute inset-0 flex flex-col justify-center px-6 relative z-10">
+              <div class="text-center mb-8">
+                 <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">📶</div>
+                 <h2 class="text-2xl font-bold text-white">CyberNet WiFi</h2>
+                 <p class="text-sm text-slate-300">Fast. Cheap. Reliable.</p>
+              </div>
+
+              <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 mb-4">
+                 <div class="text-xs font-bold text-slate-300 uppercase mb-2">Select Package</div>
+                 <div class="space-y-2">
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold text-sm shadow-lg">1 Hour @ KES 10</button>
+                    <button class="w-full bg-white/10 text-white border border-white/20 py-3 rounded-lg font-bold text-sm">24 Hours @ KES 30</button>
+                    <button class="w-full bg-white/10 text-white border border-white/20 py-3 rounded-lg font-bold text-sm">Weekly @ KES 200</button>
+                 </div>
+              </div>
+
+              <div class="text-center">
+                 <p class="text-xs text-slate-400 mb-2">Pay via M-Pesa</p>
+                 <div class="bg-white text-black font-bold py-2 rounded-lg text-sm flex items-center justify-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> STK Push Sent
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">WiFi Hotspot Management</h2>
+        <p class="text-slate-600 mb-8 text-lg">
+          Monetize your WiFi. Perfect for Cyber Cafes, Malls, Apartments, and Matatu Stages. Zero-touch voucher sales.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🎫</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Voucher Generation</h4>
+               <p class="text-sm text-slate-500">Create bulk vouchers (Login/Password). Print them to sell physically or sell digitally via M-Pesa.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🎨</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Custom Captive Portal</h4>
+               <p class="text-sm text-slate-500">Branded login page (Splash Page) with your logo, prices, and ads. Responsive for all mobile phones.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🤝</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Reseller System</h4>
+               <p class="text-sm text-slate-500">Create "Agents" (e.g., Shopkeepers) who sell vouchers. They earn a commission, you track sales.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="network" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">Deep Network Control</h2>
+      <p class="text-slate-400 text-lg">Direct integration with your MikroTik Routers via API.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">⚡</div>
+        <h3 class="font-bold text-xl text-white mb-2">Bandwidth Control</h3>
+        <p class="text-sm text-slate-400">Set upload/download limits per package (e.g., 5Mbps Down / 2Mbps Up). System creates "Simple Queues" automatically.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🔒</div>
+        <h3 class="font-bold text-xl text-white mb-2">Auto-Disconnect</h3>
+        <p class="text-sm text-slate-400">When time or data expires, the system kicks the user off the router instantly. No free rides.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🌐</div>
+        <h3 class="font-bold text-xl text-white mb-2">Multi-Router Support</h3>
+        <p class="text-sm text-slate-400">Manage 50+ routers from one dashboard. Roaming enabled: User buys voucher at Router A, can use it at Router B.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="finance" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Financial Intelligence</h2>
+        <p class="text-slate-600 mb-8 text-lg">
+          Track every shilling. Real-time reconciliation with M-Pesa.
+        </p>
+        
+        <div class="space-y-4">
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">M-Pesa Integration</h4>
+             <p class="text-sm text-slate-600">Supports Paybill and Till Number. Automatic validation of transaction codes.</p>
+           </div>
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">Expense Tracking</h4>
+             <p class="text-sm text-slate-600">Log ISP Bandwidth costs, Rent, and Staff salaries to calculate Net Profit per month.</p>
+           </div>
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">Revenue Maps</h4>
+             <p class="text-sm text-slate-600">See which base station or zone generates the most revenue.</p>
+           </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
+         <h4 class="font-bold text-slate-900 mb-6">Monthly Revenue</h4>
+         <div class="flex items-end gap-2 h-40 mb-4">
+            <div class="w-1/6 bg-blue-100 h-1/3 rounded-t relative group"><span class="absolute bottom-full left-0 right-0 text-center text-[10px] opacity-0 group-hover:opacity-100">10k</span></div>
+            <div class="w-1/6 bg-blue-200 h-1/2 rounded-t relative group"><span class="absolute bottom-full left-0 right-0 text-center text-[10px] opacity-0 group-hover:opacity-100">20k</span></div>
+            <div class="w-1/6 bg-blue-300 h-2/3 rounded-t relative group"><span class="absolute bottom-full left-0 right-0 text-center text-[10px] opacity-0 group-hover:opacity-100">45k</span></div>
+            <div class="w-1/6 bg-blue-400 h-3/4 rounded-t relative group"><span class="absolute bottom-full left-0 right-0 text-center text-[10px] opacity-0 group-hover:opacity-100">60k</span></div>
+            <div class="w-1/6 bg-blue-500 h-full rounded-t relative group"><span class="absolute bottom-full left-0 right-0 text-center text-[10px] opacity-0 group-hover:opacity-100">85k</span></div>
+            <div class="w-1/6 bg-blue-600 h-5/6 rounded-t relative group"><span class="absolute bottom-full left-0 right-0 text-center text-[10px] opacity-0 group-hover:opacity-100">70k</span></div>
+         </div>
+         <div class="flex justify-between text-xs text-slate-400 border-t border-slate-100 pt-2">
+            <span>Aug</span>
+            <span>Sep</span>
+            <span>Oct</span>
+            <span>Nov</span>
+            <span>Dec</span>
+            <span>Jan</span>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Start your ISP today.</h2>
+      <p class="text-xl text-slate-400 mb-12">Stop manual voucher printing. Automate your network with Talkin Tech.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/50">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

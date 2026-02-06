@@ -1,0 +1,340 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="NGO Project Management & M&E ERP">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #0d9488, #0f766e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+        USAID Compliant • IATI Standards • Fund Accounting
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        Transparency for <br />
+        <span class="text-gradient">Every Donation.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        The ultimate ERP for Non-Profits. Link every shilling spent to a specific <strong>Project Output</strong>. Manage <strong>Grants</strong>, <strong>M&E Logframes</strong>, and <strong>Field Operations</strong> in one system.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#me" class="bg-slate-900 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-800 transition-all shadow-xl shadow-slate-900/20">
+          View M&E Features
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+          Download Brochure
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">Fund Accounting</div><div class="text-xs text-slate-500 uppercase font-bold">Restricted Funds</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">M&E Tools</div><div class="text-xs text-slate-500 uppercase font-bold">Real-time Impact</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Grant Mgmt</div><div class="text-xs text-slate-500 uppercase font-bold">Budget vs Actual</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Procurement</div><div class="text-xs text-slate-500 uppercase font-bold">Donor Compliant</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#finance" class="hover:text-teal-700 transition-colors">Grant Finance</a>
+      <a href="#me" class="hover:text-teal-700 transition-colors">Monitoring & Evaluation</a>
+      <a href="#projects" class="hover:text-teal-700 transition-colors">Project Mgmt</a>
+      <a href="#procurement" class="hover:text-teal-700 transition-colors">Procurement</a>
+    </div>
+  </div>
+
+  <section id="finance" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-2xl mb-6">💰</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">True Fund Accounting</h2>
+        <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+          Stop using commercial accounting software. NGOs need to track <strong>Restricted vs Unrestricted Funds</strong>. Our system prevents you from spending "Donor A" money on "Donor B" projects.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="bg-teal-50 p-5 rounded-xl border border-teal-100">
+             <h4 class="font-bold text-teal-900 text-sm mb-1">Budget Control</h4>
+             <p class="text-sm text-teal-800">System blocks Purchase Orders (LPOs) if a specific Budget Line (Vote Head) is exhausted. No more accidental overspending.</p>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-teal-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Multi-Donor Reporting</strong>
+                <p class="text-sm text-slate-500">Generate separate financial reports for USAID, EU, and GIZ from the same database.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-teal-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Grant Expiry Alerts</strong>
+                <p class="text-sm text-slate-500">Receive notifications 90/60/30 days before a grant period ends to accelerate burn rate.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-teal-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Multi-Currency Grants</strong>
+                <p class="text-sm text-slate-500">Receive grant in USD, spend in KES. System handles FX gains/losses automatically.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="bg-slate-900 rounded-2xl p-3 shadow-2xl">
+           <div class="bg-white rounded-xl p-8 border border-slate-200 relative overflow-hidden">
+              <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                 <div>
+                    <div class="text-xs font-bold text-slate-400 uppercase">Project Code</div>
+                    <div class="text-xl font-bold text-slate-900">WASH-KEN-2026</div>
+                 </div>
+                 <div class="text-right">
+                    <div class="text-xs font-bold text-slate-400 uppercase">Donor</div>
+                    <div class="text-sm font-bold text-teal-700 bg-teal-50 px-3 py-1 rounded-full">Global Fund</div>
+                 </div>
+              </div>
+
+              <div class="space-y-4">
+                 <div>
+                    <div class="flex justify-between text-sm mb-1">
+                       <span class="font-bold text-slate-700">Personnel Costs</span>
+                       <span class="text-slate-500">75% Spent</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1">
+                       <div class="bg-teal-600 h-full w-[75%]"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-400">
+                       <span>Budget: $100k</span>
+                       <span>Remaining: $25k</span>
+                    </div>
+                 </div>
+
+                 <div>
+                    <div class="flex justify-between text-sm mb-1">
+                       <span class="font-bold text-slate-700">Field Activities</span>
+                       <span class="text-slate-500">40% Spent</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1">
+                       <div class="bg-blue-500 h-full w-[40%]"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-400">
+                       <span>Budget: $500k</span>
+                       <span>Remaining: $300k</span>
+                    </div>
+                 </div>
+
+                 <div>
+                    <div class="flex justify-between text-sm mb-1">
+                       <span class="font-bold text-slate-700">Travel & Logistics</span>
+                       <span class="text-red-600 font-bold">98% Spent</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mb-1">
+                       <div class="bg-red-500 h-full w-[98%]"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-400">
+                       <span>Budget: $50k</span>
+                       <span class="text-red-500 font-bold">Remaining: $1k (Alert)</span>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="me" class="py-24 px-6 bg-teal-50 border-b border-teal-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="bg-white p-8 rounded-3xl border border-teal-200 shadow-xl">
+         <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center text-xl font-bold">📊</div>
+            <div>
+               <h3 class="font-bold text-slate-900 text-lg">Logframe Indicator</h3>
+               <p class="text-xs text-slate-500 font-bold">Outcome 3.2: Access to Water</p>
+            </div>
+         </div>
+         
+         <div class="space-y-6">
+            <div class="flex gap-4 items-end">
+               <div class="flex-1">
+                  <div class="text-3xl font-bold text-slate-900">4,250</div>
+                  <div class="text-xs text-slate-500 uppercase">Households Connected</div>
+               </div>
+               <div class="text-right">
+                  <div class="text-sm font-bold text-green-600">+12%</div>
+                  <div class="text-xs text-slate-400">vs Target</div>
+               </div>
+            </div>
+
+            <div class="h-32 bg-slate-100 rounded-xl relative overflow-hidden">
+               <div class="absolute inset-0 flex items-center justify-center text-slate-400 text-xs">
+                  [Heatmap of Turkana County]
+               </div>
+               <div class="absolute top-10 left-10 w-3 h-3 bg-teal-500 rounded-full animate-ping"></div>
+               <div class="absolute top-12 left-24 w-3 h-3 bg-teal-500 rounded-full"></div>
+               <div class="absolute top-20 left-16 w-3 h-3 bg-teal-500 rounded-full"></div>
+            </div>
+
+            <div class="text-xs text-slate-500 italic">
+               *Data source: ODK Collect, Field Survey Jan 2026.
+            </div>
+         </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Impact Measurement (M&E)</h2>
+        <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+          Move beyond Excel Logframes. Link your field data directly to your impact indicators. Show donors real-time results.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-teal-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">📈</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Digital Logframes</h4>
+               <p class="text-sm text-slate-500">Input your Outputs, Outcomes, and Goals. System tracks progress against baseline and targets.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-teal-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">📱</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Field Data Collection (ODK)</h4>
+               <p class="text-sm text-slate-500">Integrates with ODK/KoboToolbox. Field staff submit survey data which auto-updates the M&E dashboard.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-teal-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🌍</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Beneficiary Management</h4>
+               <p class="text-sm text-slate-500">Create a database of beneficiaries to ensure equitable distribution and prevent double-dipping.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="procurement" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">Donor-Compliant Procurement</h2>
+      <p class="text-slate-400 text-lg">Ensure every purchase passes the audit test.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">📑</div>
+        <h3 class="font-bold text-xl text-white mb-2">Quotation Analysis</h3>
+        <p class="text-sm text-slate-400">System forces 3-quote comparison before LPO generation. Automatically flags cheapest/best value vendor.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">✅</div>
+        <h3 class="font-bold text-xl text-white mb-2">Approval Workflows</h3>
+        <p class="text-sm text-slate-400">Set limits. POs under $500 approved by Manager. POs over $10k require Country Director approval.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🚚</div>
+        <h3 class="font-bold text-xl text-white mb-2">Inventory Distribution</h3>
+        <p class="text-sm text-slate-400">Track relief items from central warehouse to field distribution points. Generate Waybills automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Activity & Timesheet Management</h2>
+        <p class="text-slate-600 mb-8 text-lg">
+          For many donors, staff time is a billable expense. Track exactly who worked on what project.
+        </p>
+        
+        <div class="space-y-4">
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">Activity Planning</h4>
+             <p class="text-sm text-slate-600">Gantt charts for project timelines. Assign tasks to field officers with deadlines.</p>
+           </div>
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">Effort Reporting (Timesheets)</h4>
+             <p class="text-sm text-slate-600">Staff allocate their hours: "Monday: 4hrs on Project A, 4hrs on Project B". System splits salary cost accordingly.</p>
+           </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-lg">
+         <div class="flex justify-between items-center mb-6">
+            <h4 class="font-bold text-slate-900">Weekly Timesheet</h4>
+            <div class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-bold">Approved</div>
+         </div>
+         
+         <div class="space-y-2">
+            <div class="grid grid-cols-4 text-xs font-bold text-slate-400 uppercase border-b border-slate-100 pb-2">
+               <div class="col-span-2">Project</div>
+               <div>Hours</div>
+               <div>Cost</div>
+            </div>
+            <div class="grid grid-cols-4 text-sm items-center py-2 border-b border-slate-50">
+               <div class="col-span-2 font-bold text-teal-700">WASH-KEN-2026</div>
+               <div class="text-slate-600">24 hrs</div>
+               <div class="text-slate-900 font-bold">$1,200</div>
+            </div>
+            <div class="grid grid-cols-4 text-sm items-center py-2 border-b border-slate-50">
+               <div class="col-span-2 font-bold text-blue-700">EDU-SOM-2025</div>
+               <div class="text-slate-600">16 hrs</div>
+               <div class="text-slate-900 font-bold">$800</div>
+            </div>
+            <div class="grid grid-cols-4 text-sm items-center py-2 bg-slate-50 rounded mt-2">
+               <div class="col-span-2 font-bold text-slate-900 pl-2">Total</div>
+               <div class="text-slate-900 font-bold">40 hrs</div>
+               <div class="text-slate-900 font-bold">$2,000</div>
+            </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Secure your funding.</h2>
+      <p class="text-xl text-slate-400 mb-12">Transparency builds trust with donors. Upgrade your systems today.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-teal-500 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

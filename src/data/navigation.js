@@ -4,21 +4,21 @@ export const megaMenuData = [
     type: "mega",
     columns: [
       {
-        heading: "Institutional",
+        heading: "Institutional & Finance",
         items: [
           { name: "Smart School ERP", desc: "Admissions, Finance & Portals", icon: "🎓", href: "/solutions/smart-school", badge: "TOP" },
           { name: "Sacco Core Banking", desc: "SASRA Compliant Banking", icon: "🏦", href: "/solutions/sacco-core" },
-          { name: "MediFlow Hospital", desc: "Patient Records & Billing", icon: "🏥", href: "/solutions/hospital" },
-          { name: "NGO Project Mgmt", desc: "Donor & Grant Tracking", icon: "🤝", href: "/solutions/ngo-erp" }
+          { name: "Microfinance System", desc: "Credit-Only & Digital Lending", icon: "💰", href: "/solutions/microfinance", badge: "NEW" },
+          { name: "MediFlow Hospital", desc: "Patient Records & Billing", icon: "🏥", href: "/solutions/hospital" }
         ]
       },
       {
         heading: "Business Ops",
         items: [
-          { name: "Captain Order POS", desc: "Restaurant & Bar KDS", icon: "🍽️", href: "/solutions/pos", badge: "HOT" },
-          { name: "Retail POS", desc: "Supermarket Stock Control", icon: "🛒", href: "/solutions/retail-pos" },
+          { name: "Captain Order POS", desc: "Restaurant & Retail System", icon: "🛒", href: "/solutions/pos", badge: "HOT" },
           { name: "HR & Payroll", desc: "KRA Automated Payroll", icon: "👥", href: "/solutions/hr-payroll" },
-          { name: "Real Estate", desc: "Property Management", icon: "🏢", href: "/solutions/property" }
+          { name: "Real Estate", desc: "Property Management", icon: "🏢", href: "/solutions/property" },
+          { name: "NGO Project Mgmt", desc: "Donor & Grant Tracking", icon: "🤝", href: "/solutions/ngo-erp" }
         ]
       }
     ],
@@ -26,7 +26,7 @@ export const megaMenuData = [
       title: "Case Study",
       name: "Sacco Digital Shift",
       desc: "Migrating 50k members to the cloud.",
-      link: "/case-studies/sacco",
+      link: "/solutions/sacco-core",
       image: "bg-blue-600"
     }
   },
@@ -38,7 +38,7 @@ export const megaMenuData = [
         heading: "Mobility",
         items: [
           { name: "Taxi Booking App", desc: "Uber/Bolt Clone White Label", icon: "🚖", href: "/solutions/taxi-app", badge: "POPULAR" },
-          { name: "Logistics App", desc: "Trucking & Fleet Mgmt", icon: "🚚", href: "/solutions/logistics" },
+          { name: "Logistics System", desc: "Trucking & Fleet Mgmt", icon: "🚚", href: "/solutions/courier-app" },
           { name: "Parcel Delivery", desc: "Boda Boda Courier App", icon: "📦", href: "/solutions/courier-app" }
         ]
       },
@@ -46,7 +46,7 @@ export const megaMenuData = [
         heading: "Marketplace",
         items: [
           { name: "Food Delivery", desc: "UberEats Clone", icon: "🍔", href: "/solutions/food-delivery" },
-          { name: "Grocery App", desc: "Supermarket Delivery", icon: "🥦", href: "/solutions/grocery" },
+          { name: "Grocery App", desc: "Supermarket Delivery", icon: "🥦", href: "/solutions/food-delivery" },
           { name: "Handyman App", desc: "Service Booking", icon: "🛠️", href: "/solutions/handyman" }
         ]
       }
@@ -84,11 +84,10 @@ export const megaMenuData = [
       title: "Offer",
       name: "Free Migration",
       desc: "Move to our servers for free.",
-      link: "/infrastructure/migration",
+      link: "/contact",
       image: "bg-emerald-600"
     }
   },
-  // NEW COMPANY DROPDOWN
   {
     trigger: "Company",
     type: "simple", 

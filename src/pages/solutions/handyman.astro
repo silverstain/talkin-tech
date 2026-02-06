@@ -1,0 +1,313 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Handyman & Service Booking App">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #4f46e5, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+        Uber for Tutors • Cleaners • Plumbers • Electricians
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        The "Uber" for <br />
+        <span class="text-gradient">Skilled Services.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        Connect customers with verified professionals instantly. A complete marketplace for <strong>Booking Appointments</strong>, <strong>Negotiating Quotes</strong>, and <strong>Secure Payments</strong>.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#features" class="bg-indigo-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-900/20">
+          Explore Features
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+          Get a Quote
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">Verified</div><div class="text-xs text-slate-500 uppercase font-bold">Provider Badges</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Booking</div><div class="text-xs text-slate-500 uppercase font-bold">Now or Later</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Payments</div><div class="text-xs text-slate-500 uppercase font-bold">Escrow System</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Chat</div><div class="text-xs text-slate-500 uppercase font-bold">In-App Messaging</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#customer" class="hover:text-indigo-600 transition-colors">Booking App</a>
+      <a href="#provider" class="hover:text-indigo-600 transition-colors">Provider App</a>
+      <a href="#admin" class="hover:text-indigo-600 transition-colors">Verification Admin</a>
+      <a href="#usecases" class="hover:text-indigo-600 transition-colors">Use Cases</a>
+    </div>
+  </div>
+
+  <section id="customer" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-2xl mb-6">📅</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Book a Pro in Seconds</h2>
+        <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+          Customers can browse categories, view provider profiles with reviews, and book a slot that fits their schedule.
+        </p>
+        
+        <div class="space-y-6">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-indigo-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Fixed vs Hourly Pricing</strong>
+                <p class="text-sm text-slate-500">Book a "Full House Clean" (Fixed) or "Electrician" (Hourly Rate).</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-indigo-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Provider Profiles</strong>
+                <p class="text-sm text-slate-500">See "Job Completion Rate", "Star Rating", and "Customer Reviews" before booking.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-indigo-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Secure Payments</strong>
+                <p class="text-sm text-slate-500">Money is held in Escrow and only released to the provider when the job is marked "Completed".</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="flex justify-center relative">
+           <div class="w-[300px] h-[600px] bg-slate-50 rounded-[3rem] border-[8px] border-slate-200 shadow-2xl relative overflow-hidden">
+              <div class="absolute inset-0 flex flex-col">
+                 <div class="p-6 bg-indigo-600 text-white rounded-b-3xl shadow-lg z-10">
+                    <div class="text-xs opacity-80 uppercase font-bold mb-1">Location</div>
+                    <div class="font-bold flex items-center gap-1 text-sm">Kilimani, Nairobi <span>▼</span></div>
+                    <div class="mt-4 bg-indigo-800 rounded-xl p-3 flex items-center gap-2 text-sm text-indigo-200">
+                       <span>🔍</span> Find a service...
+                    </div>
+                 </div>
+                 
+                 <div class="p-6 grid grid-cols-3 gap-4">
+                    <div class="flex flex-col items-center gap-2">
+                       <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl">🧹</div>
+                       <span class="text-xs font-bold text-slate-600">Cleaning</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                       <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl">🔧</div>
+                       <span class="text-xs font-bold text-slate-600">Plumber</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                       <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl">💇‍♀️</div>
+                       <span class="text-xs font-bold text-slate-600">Beauty</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                       <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl">⚡</div>
+                       <span class="text-xs font-bold text-slate-600">Electric</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                       <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl">🎨</div>
+                       <span class="text-xs font-bold text-slate-600">Painting</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                       <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl">📱</div>
+                       <span class="text-xs font-bold text-slate-600">Repairs</span>
+                    </div>
+                 </div>
+
+                 <div class="px-6 pb-6">
+                    <div class="text-xs font-bold text-slate-400 uppercase mb-3">Top Rated Pros</div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                       <div class="flex gap-3 mb-3">
+                          <div class="w-10 h-10 bg-slate-200 rounded-full"></div>
+                          <div>
+                             <h4 class="font-bold text-slate-900 text-sm">David Kamau</h4>
+                             <div class="text-xs text-slate-500">Expert Plumber • 4.9 ⭐ (120 Jobs)</div>
+                          </div>
+                       </div>
+                       <div class="flex justify-between items-center border-t border-slate-100 pt-3">
+                          <span class="text-xs font-bold text-slate-400">KES 800/hr</span>
+                          <button class="bg-slate-900 text-white px-3 py-1 rounded-lg text-xs font-bold">Book Now</button>
+                       </div>
+                    </div>
+                 </div>
+
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="provider" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl">
+         <div class="flex justify-between items-center mb-6">
+            <h3 class="font-bold text-slate-900 text-lg">Job Request</h3>
+            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded text-xs font-bold">Incoming</span>
+         </div>
+         
+         <div class="border-2 border-dashed border-slate-200 rounded-xl p-6 text-center mb-6">
+            <div class="text-4xl mb-2">🚿</div>
+            <h4 class="font-bold text-slate-900 text-xl">Leaking Pipe Repair</h4>
+            <p class="text-sm text-slate-500 mb-4">Westlands • 3.2km away</p>
+            <div class="text-2xl font-bold text-indigo-600 mb-6">KES 1,500</div>
+            
+            <div class="grid grid-cols-2 gap-4">
+               <button class="bg-white border-2 border-slate-200 text-slate-500 py-3 rounded-xl font-bold">Decline</button>
+               <button class="bg-indigo-600 text-white py-3 rounded-xl font-bold shadow-lg shadow-indigo-500/30">Accept</button>
+            </div>
+         </div>
+
+         <div class="flex justify-between text-xs text-slate-400 px-2">
+            <span>Customer Rating: 4.5</span>
+            <span>Payment: M-Pesa</span>
+         </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Empower your Workforce</h2>
+        <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+          The Provider App allows professionals to manage their business on the go. They can set availability, track earnings, and navigate to job sites.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-indigo-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🕒</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Availability Toggle</h4>
+               <p class="text-sm text-slate-500">Providers can go "Online" or "Offline" instantly. No jobs are assigned when they are offline.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-indigo-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🗺️</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">In-App Navigation</h4>
+               <p class="text-sm text-slate-500">Integrated Google Maps directs the provider exactly to the customer's doorstep.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-indigo-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">💼</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Wallet & Withdrawals</h4>
+               <p class="text-sm text-slate-500">Earnings accumulate in the app wallet. Providers can withdraw to M-Pesa instantly (minus your commission).</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="admin" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">Trust is your Currency</h2>
+      <p class="text-slate-400 text-lg">Built-in tools to vet and manage service providers.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🆔</div>
+        <h3 class="font-bold text-xl text-white mb-2">Document Verification</h3>
+        <p class="text-sm text-slate-400">Providers must upload ID, Certificate of Good Conduct, and Trade Licenses before account activation.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">⭐</div>
+        <h3 class="font-bold text-xl text-white mb-2">Quality Control</h3>
+        <p class="text-sm text-slate-400">Set a threshold (e.g., 3.5 stars). If a provider drops below, the system auto-suspends them.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">📊</div>
+        <h3 class="font-bold text-xl text-white mb-2">Commission Manager</h3>
+        <p class="text-sm text-slate-400">Set different commissions for different categories (e.g., 10% for Cleaners, 15% for Plumbers).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="usecases" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">What can you build?</h2>
+        <p class="text-slate-500 text-lg">This platform is versatile enough for any service marketplace.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-4">
+         <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+            <span class="text-3xl block mb-3">🧼</span>
+            <h4 class="font-bold text-indigo-900">Home Cleaning</h4>
+         </div>
+         <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+            <span class="text-3xl block mb-3">💆‍♀️</span>
+            <h4 class="font-bold text-indigo-900">Beauty & Salon</h4>
+         </div>
+         <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+            <span class="text-3xl block mb-3">🐕</span>
+            <h4 class="font-bold text-indigo-900">Pet Grooming</h4>
+         </div>
+         <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+            <span class="text-3xl block mb-3">🚗</span>
+            <h4 class="font-bold text-indigo-900">Car Wash</h4>
+         </div>
+         <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+            <span class="text-3xl block mb-3">📚</span>
+            <h4 class="font-bold text-indigo-900">Private Tutors</h4>
+         </div>
+         <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+            <span class="text-3xl block mb-3">📸</span>
+            <h4 class="font-bold text-indigo-900">Photography</h4>
+         </div>
+         <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+            <span class="text-3xl block mb-3">🔨</span>
+            <h4 class="font-bold text-indigo-900">Fundis (Repair)</h4>
+         </div>
+         <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+            <span class="text-3xl block mb-3">🩺</span>
+            <h4 class="font-bold text-indigo-900">Home Nursing</h4>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Launch your Marketplace.</h2>
+      <p class="text-xl text-slate-400 mb-12">Get the source code or a white-label license today.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-indigo-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-900/50">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

@@ -1,0 +1,353 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Microfinance & Lending Management System">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #d97706, #b45309);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        Digital Lending • Credit Only MFIs • Shylock Management
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        Scale your <br />
+        <span class="text-gradient">Lending Business.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        From <strong>Logbook Loans</strong> to <strong>Mobile Instant Loans</strong>. Automate everything: Appraisals, M-Pesa Disbursements, Penalty Calculations, and CRB Listing.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#lending" class="bg-amber-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-amber-700 transition-all shadow-xl shadow-amber-900/20 border-2 border-transparent">
+          View Modules
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+          Get Quote
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">Instant</div><div class="text-xs text-slate-500 uppercase font-bold">M-Pesa Payouts</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Field App</div><div class="text-xs text-slate-500 uppercase font-bold">Offline Collections</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">CRB Check</div><div class="text-xs text-slate-500 uppercase font-bold">Identity Verification</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Automated</div><div class="text-xs text-slate-500 uppercase font-bold">Penalty Logic</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#lending" class="hover:text-amber-600 transition-colors">Loan Management</a>
+      <a href="#mobile" class="hover:text-amber-600 transition-colors">Mobile Lending</a>
+      <a href="#field" class="hover:text-amber-600 transition-colors">Field Collections</a>
+      <a href="#reports" class="hover:text-amber-600 transition-colors">Portfolio Reports</a>
+    </div>
+  </div>
+
+  <section id="lending" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-6">💼</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Core Lending Engine</h2>
+        <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+          Flexible product configuration. Whether you offer <strong>Daily Group Loans</strong>, <strong>Monthly Salary Check-offs</strong>, or <strong>Logbook Loans</strong>, our system handles the math.
+        </p>
+        
+        <div class="space-y-6">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-amber-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Flexible Amortization</strong>
+                <p class="text-sm text-slate-500">Flat Rate, Reducing Balance, or Rule of 78. Weekly, Monthly, or Daily schedules.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-amber-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Collateral Register</strong>
+                <p class="text-sm text-slate-500">Upload photos of Logbooks, Title Deeds, or Household Goods. Track expiry of insurance.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-amber-600 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Automated Penalties</strong>
+                <p class="text-sm text-slate-500">System automatically applies late fees (e.g., 5% of Installment) at midnight if not paid.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="bg-slate-900 rounded-2xl p-3 shadow-2xl">
+           <div class="bg-white rounded-xl p-8 border border-slate-200 relative overflow-hidden">
+              
+              <div class="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+                 <div>
+                    <div class="text-xl font-bold text-slate-900">Loan #LN-2024-892</div>
+                    <div class="text-xs text-slate-500">Borrower: James Mwangi</div>
+                 </div>
+                 <div class="bg-green-100 text-green-700 px-3 py-1 rounded text-xs font-bold">Active</div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-4 mb-6">
+                 <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Principal</div>
+                    <div class="text-lg font-bold text-slate-900">50,000</div>
+                 </div>
+                 <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Interest (10%)</div>
+                    <div class="text-lg font-bold text-slate-900">5,000</div>
+                 </div>
+                 <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Total Due</div>
+                    <div class="text-lg font-bold text-amber-600">55,000</div>
+                 </div>
+              </div>
+
+              <div class="space-y-2">
+                 <div class="flex justify-between text-xs font-bold text-slate-400 uppercase border-b border-slate-100 pb-1">
+                    <span>Due Date</span>
+                    <span>Amount</span>
+                    <span>Status</span>
+                 </div>
+                 <div class="flex justify-between text-sm text-slate-600">
+                    <span>01 Feb 2026</span>
+                    <span>11,000</span>
+                    <span class="text-green-600 font-bold">PAID</span>
+                 </div>
+                 <div class="flex justify-between text-sm text-slate-600">
+                    <span>01 Mar 2026</span>
+                    <span>11,000</span>
+                    <span class="text-green-600 font-bold">PAID</span>
+                 </div>
+                 <div class="flex justify-between text-sm text-slate-900 font-bold bg-amber-50 p-2 rounded">
+                    <span>01 Apr 2026</span>
+                    <span>11,000 + 500 (Pen)</span>
+                    <span class="text-red-600 animate-pulse">OVERDUE</span>
+                 </div>
+                 <div class="flex justify-between text-sm text-slate-400">
+                    <span>01 May 2026</span>
+                    <span>11,000</span>
+                    <span>Pending</span>
+                 </div>
+              </div>
+
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mobile" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="relative flex justify-center">
+        <div class="w-[300px] h-[600px] bg-slate-900 rounded-[3rem] border-[8px] border-slate-800 shadow-2xl relative overflow-hidden">
+           <div class="absolute inset-0 bg-white flex flex-col">
+              <div class="bg-amber-600 h-40 p-6 flex flex-col justify-center text-white rounded-b-3xl shadow-lg relative z-10">
+                 <div class="text-sm opacity-90">Loan Limit</div>
+                 <div class="font-bold text-4xl mt-1">KES 15,000</div>
+                 <div class="text-xs mt-2 bg-black/20 inline-block px-2 py-1 rounded w-fit">Qualify for more ></div>
+              </div>
+              <div class="flex-1 p-6 space-y-6">
+                 <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 shadow-sm">
+                       <div class="text-2xl mb-2">💸</div>
+                       <div class="text-xs font-bold text-slate-700">Request Loan</div>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-100 shadow-sm">
+                       <div class="text-2xl mb-2">💳</div>
+                       <div class="text-xs font-bold text-slate-700">Repay Loan</div>
+                    </div>
+                 </div>
+                 
+                 <div class="bg-amber-50 p-4 rounded-xl border border-amber-100">
+                    <h4 class="font-bold text-amber-900 mb-2">Active Loan</h4>
+                    <div class="flex justify-between text-sm text-amber-800 mb-1">
+                       <span>Balance</span>
+                       <span class="font-bold">4,200</span>
+                    </div>
+                    <div class="flex justify-between text-sm text-amber-800">
+                       <span>Due Date</span>
+                       <span class="font-bold text-red-500">Tomorrow</span>
+                    </div>
+                    <div class="mt-3 w-full bg-amber-200 h-2 rounded-full overflow-hidden">
+                       <div class="bg-amber-600 h-full w-[80%]"></div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">White-Label Mobile Lending App</h2>
+        <p class="text-slate-600 mb-8 text-lg">
+          Launch your own "Tala" or "Branch". Fully automated lending from application to disbursement without human intervention.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🤖</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Credit Scoring Algorithm</h4>
+               <p class="text-sm text-slate-600">System analyzes M-Pesa statements and repayment history to assign a dynamic loan limit automatically.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">⚡</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Instant Disbursement</h4>
+               <p class="text-sm text-slate-600">Approved loans are sent via M-Pesa B2C (Business to Customer) API in seconds, 24/7.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🔔</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Automated Reminders</h4>
+               <p class="text-sm text-slate-600">SMS reminders sent 3 days before due date, on due date, and daily after default.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="field" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">Field Collection App</h2>
+      <p class="text-slate-400 text-lg">Empower your Loan Officers. Manage Group Lending and Table Banking efficiently.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">📡</div>
+        <h3 class="font-bold text-xl text-white mb-2">Works Offline</h3>
+        <p class="text-sm text-slate-400">Officers can record collections in remote areas without internet. Data syncs automatically when connection is restored.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">📍</div>
+        <h3 class="font-bold text-xl text-white mb-2">GPS Tracking</h3>
+        <p class="text-sm text-slate-400">Track your officers in real-time. Ensure they actually visited the client's shop or home for recovery.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🖨️</div>
+        <h3 class="font-bold text-xl text-white mb-2">Bluetooth Printing</h3>
+        <p class="text-sm text-slate-400">Connect to portable thermal printers to issue physical receipts to customers in the field.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reports" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Portfolio Intelligence</h2>
+        <p class="text-slate-600 mb-8 text-lg">
+          Don't fly blind. Understand your Portfolio at Risk (PAR) and liquidity position instantly.
+        </p>
+        
+        <div class="space-y-4">
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">PAR Reporting</h4>
+             <p class="text-sm text-slate-600">Automated classification of loans: Normal, Watch, Substandard, Doubtful, and Loss (PAR 30, 60, 90).</p>
+           </div>
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">Income Analysis</h4>
+             <p class="text-sm text-slate-600">Breakdown of earnings: Interest Income vs Penalty Income vs Processing Fees.</p>
+           </div>
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">CRB Integration (Metropol)</h4>
+             <p class="text-sm text-slate-600">Auto-list serial defaulters to the Credit Reference Bureau to prevent them from borrowing elsewhere.</p>
+           </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
+         <h4 class="font-bold text-slate-900 mb-6">Portfolio Health</h4>
+         <div class="space-y-6">
+            <div>
+               <div class="flex justify-between text-sm mb-2 font-bold text-slate-700">
+                  <span>Performing Loans</span>
+                  <span>78%</span>
+               </div>
+               <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                  <div class="bg-green-500 h-full w-[78%]"></div>
+               </div>
+            </div>
+            <div>
+               <div class="flex justify-between text-sm mb-2 font-bold text-slate-700">
+                  <span>Watch (1-30 Days)</span>
+                  <span>12%</span>
+               </div>
+               <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                  <div class="bg-yellow-500 h-full w-[12%]"></div>
+               </div>
+            </div>
+            <div>
+               <div class="flex justify-between text-sm mb-2 font-bold text-slate-700">
+                  <span>NPL (>90 Days)</span>
+                  <span>10%</span>
+               </div>
+               <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                  <div class="bg-red-500 h-full w-[10%]"></div>
+               </div>
+            </div>
+         </div>
+         <div class="mt-8 pt-8 border-t border-slate-100 flex justify-between">
+            <div>
+               <div class="text-xs text-slate-400 uppercase font-bold">Total Disbursed</div>
+               <div class="text-xl font-bold text-slate-900">12.5M</div>
+            </div>
+            <div>
+               <div class="text-xs text-slate-400 uppercase font-bold">Interest Earned</div>
+               <div class="text-xl font-bold text-green-600">2.1M</div>
+            </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Automate your Lending.</h2>
+      <p class="text-xl text-slate-400 mb-12">Stop using notebooks. Secure your capital with Talkin Tech MFI.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-amber-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-amber-500 transition-colors shadow-lg shadow-amber-900/50">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
