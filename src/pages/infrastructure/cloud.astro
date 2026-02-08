@@ -1,0 +1,268 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Cloud Hosting, VPS & Dedicated Servers">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+        NVMe Storage • 99.99% Uptime • Local Support
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        High Performance <br />
+        <span class="text-gradient">Cloud Infrastructure.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        Stop struggling with slow overseas servers. Deploy your apps on our **High-Speed Enterprise Cloud**. We offer **Managed VPS**, **Dedicated Servers**, and **cPanel Hosting** with M-Pesa billing.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#vps" class="bg-slate-900 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-800 transition-all shadow-xl shadow-sky-900/20">
+          View VPS Plans
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+          Custom Server Quote
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">Support</div><div class="text-xs text-slate-500 uppercase font-bold">24/7 in Nairobi</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Speed</div><div class="text-xs text-slate-500 uppercase font-bold">1 Gbps Uplink</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Backups</div><div class="text-xs text-slate-500 uppercase font-bold">Daily Automated</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Payments</div><div class="text-xs text-slate-500 uppercase font-bold">M-Pesa Accepted</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#vps" class="hover:text-sky-600 transition-colors">VPS Hosting</a>
+      <a href="#dedicated" class="hover:text-sky-600 transition-colors">Dedicated Servers</a>
+      <a href="#managed" class="hover:text-sky-600 transition-colors">Managed Services</a>
+      <a href="#email" class="hover:text-sky-600 transition-colors">Corporate Email</a>
+    </div>
+  </div>
+
+  <section id="vps" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Scalable Cloud VPS</h2>
+      <p class="text-slate-500 text-lg">Root access. Full control. Scale up RAM and CPU instantly as you grow.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      
+      <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200 hover:border-sky-400 transition-all group">
+        <h3 class="font-bold text-slate-900 text-xl mb-2">Startup VPS</h3>
+        <p class="text-sm text-slate-500 mb-6">For hosting simple apps and websites.</p>
+        <div class="text-4xl font-bold text-slate-900 mb-6">KES 2,500<span class="text-sm text-slate-400 font-normal">/mo</span></div>
+        
+        <ul class="space-y-3 text-left mb-8">
+           <li class="flex items-center gap-3 text-sm text-slate-700"><span class="text-sky-500 font-bold">✓</span> 2 CPU Cores</li>
+           <li class="flex items-center gap-3 text-sm text-slate-700"><span class="text-sky-500 font-bold">✓</span> 4 GB RAM</li>
+           <li class="flex items-center gap-3 text-sm text-slate-700"><span class="text-sky-500 font-bold">✓</span> 80 GB NVMe SSD</li>
+           <li class="flex items-center gap-3 text-sm text-slate-700"><span class="text-sky-500 font-bold">✓</span> 4 TB Bandwidth</li>
+        </ul>
+        <a href="/contact" class="block w-full py-3 rounded-xl border border-slate-300 font-bold text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">Order Now</a>
+      </div>
+
+      <div class="p-8 bg-slate-900 rounded-3xl border border-slate-800 relative shadow-2xl transform scale-105 z-10">
+        <div class="absolute top-0 right-0 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">MOST POPULAR</div>
+        <h3 class="font-bold text-white text-xl mb-2">Business VPS</h3>
+        <p class="text-sm text-slate-400 mb-6">Perfect for Sacco Systems & ERPs.</p>
+        <div class="text-4xl font-bold text-white mb-6">KES 5,000<span class="text-sm text-slate-400 font-normal">/mo</span></div>
+        
+        <ul class="space-y-3 text-left mb-8">
+           <li class="flex items-center gap-3 text-sm text-white"><span class="text-sky-400 font-bold">✓</span> 4 CPU Cores</li>
+           <li class="flex items-center gap-3 text-sm text-white"><span class="text-sky-400 font-bold">✓</span> 8 GB RAM</li>
+           <li class="flex items-center gap-3 text-sm text-white"><span class="text-sky-400 font-bold">✓</span> 160 GB NVMe SSD</li>
+           <li class="flex items-center gap-3 text-sm text-white"><span class="text-sky-400 font-bold">✓</span> 8 TB Bandwidth</li>
+           <li class="flex items-center gap-3 text-sm text-white"><span class="text-sky-400 font-bold">✓</span> Free cPanel License</li>
+        </ul>
+        <a href="/contact" class="block w-full py-3 rounded-xl bg-sky-600 text-white font-bold hover:bg-sky-500 transition-colors">Order Now</a>
+      </div>
+
+      <div class="p-8 bg-slate-50 rounded-3xl border border-slate-200 hover:border-sky-400 transition-all group">
+        <h3 class="font-bold text-slate-900 text-xl mb-2">Enterprise VPS</h3>
+        <p class="text-sm text-slate-500 mb-6">For high-traffic apps and databases.</p>
+        <div class="text-4xl font-bold text-slate-900 mb-6">KES 10,000<span class="text-sm text-slate-400 font-normal">/mo</span></div>
+        
+        <ul class="space-y-3 text-left mb-8">
+           <li class="flex items-center gap-3 text-sm text-slate-700"><span class="text-sky-500 font-bold">✓</span> 8 CPU Cores</li>
+           <li class="flex items-center gap-3 text-sm text-slate-700"><span class="text-sky-500 font-bold">✓</span> 16 GB RAM</li>
+           <li class="flex items-center gap-3 text-sm text-slate-700"><span class="text-sky-500 font-bold">✓</span> 320 GB NVMe SSD</li>
+           <li class="flex items-center gap-3 text-sm text-slate-700"><span class="text-sky-500 font-bold">✓</span> Unlimited Bandwidth</li>
+        </ul>
+        <a href="/contact" class="block w-full py-3 rounded-xl border border-slate-300 font-bold text-slate-600 hover:bg-slate-900 hover:text-white transition-colors">Order Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="dedicated" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Bare Metal Dedicated Servers</h2>
+        <p class="text-slate-600 mb-8 text-lg">
+          No sharing resources. Get 100% of the hardware power for your mission-critical applications.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🚀</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Extreme Performance</h4>
+               <p class="text-sm text-slate-500">Dual Xeon or AMD EPYC processors with up to 1TB RAM available on request.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🔒</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Enhanced Security</h4>
+               <p class="text-sm text-slate-500">Physical isolation ensures your data is never on the same disk as another client.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">⚙️</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Custom Configuration</h4>
+               <p class="text-sm text-slate-500">Need 4x 10TB Hard Drives for a file server? We build the server to your exact specs.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-800 relative overflow-hidden">
+         <div class="absolute top-0 right-0 w-40 h-40 bg-sky-500 blur-[80px] opacity-20"></div>
+         
+         <div class="space-y-4">
+            <div class="flex items-center gap-4 bg-black/50 p-4 rounded-lg border border-slate-700">
+               <div class="flex gap-2">
+                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse delay-75"></div>
+               </div>
+               <div class="flex-1 font-mono text-xs text-sky-400">root@node-01:~# uptime</div>
+               <div class="text-xs text-slate-500 font-bold">DELL POWEREDGE</div>
+            </div>
+            <div class="flex items-center gap-4 bg-black/50 p-4 rounded-lg border border-slate-700">
+               <div class="flex gap-2">
+                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse delay-75"></div>
+               </div>
+               <div class="flex-1 font-mono text-xs text-sky-400">
+                  <div class="w-full bg-slate-800 h-1 rounded overflow-hidden">
+                     <div class="bg-green-500 h-full w-[40%] animate-pulse"></div>
+                  </div>
+               </div>
+               <div class="text-xs text-slate-500 font-bold">CPU LOAD: 40%</div>
+            </div>
+            <div class="flex items-center gap-4 bg-black/50 p-4 rounded-lg border border-slate-700">
+               <div class="flex gap-2">
+                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse delay-75"></div>
+               </div>
+               <div class="flex-1 font-mono text-xs text-sky-400">
+                  <div class="w-full bg-slate-800 h-1 rounded overflow-hidden">
+                     <div class="bg-blue-500 h-full w-[80%]"></div>
+                  </div>
+               </div>
+               <div class="text-xs text-slate-500 font-bold">RAID 10: OK</div>
+            </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="managed" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">We Manage Your Servers</h2>
+      <p class="text-slate-400 text-lg">You focus on your business. We act as your internal IT department.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🔧</div>
+        <h3 class="font-bold text-xl text-white mb-2">SysAdmin on Call</h3>
+        <p class="text-sm text-slate-400">Need to install a specific PHP module? Need to configure a Firewall? Just open a ticket, and we do it.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🛡️</div>
+        <h3 class="font-bold text-xl text-white mb-2">Security Hardening</h3>
+        <p class="text-sm text-slate-400">We configure Fail2Ban, ModSecurity, and CSF Firewalls to keep hackers out of your VPS.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🔄</div>
+        <h3 class="font-bold text-xl text-white mb-2">Free Migration</h3>
+        <p class="text-sm text-slate-400">Moving from Godaddy or HostGator? We migrate all your emails, files, and databases for free.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="email" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+       <div>
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">Professional Corporate Email</h2>
+          <p class="text-slate-600 mb-6">
+             Stop using <span class="font-bold">@gmail.com</span> for your business. Look professional with <span class="font-bold">name@yourcompany.co.ke</span>.
+          </p>
+          <ul class="space-y-3 mb-8">
+             <li class="flex items-center gap-3 text-sm text-slate-700">
+                <span class="text-green-500 font-bold">✓</span> 50GB Storage per User
+             </li>
+             <li class="flex items-center gap-3 text-sm text-slate-700">
+                <span class="text-green-500 font-bold">✓</span> Outlook & Mobile Sync
+             </li>
+             <li class="flex items-center gap-3 text-sm text-slate-700">
+                <span class="text-green-500 font-bold">✓</span> Advanced Spam Filtering
+             </li>
+          </ul>
+          <a href="/contact" class="text-sky-600 font-bold hover:underline">Get Email Pricing &rarr;</a>
+       </div>
+       <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center">
+          <div class="text-6xl mb-4">📧</div>
+          <div class="font-bold text-slate-900 mb-2">Reseller Hosting Available</div>
+          <p class="text-xs text-slate-500">Want to start your own hosting company? We offer White Label Reseller packages starting at KES 3,000/mo.</p>
+       </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Deploy in Minutes.</h2>
+      <p class="text-xl text-slate-400 mb-12">Join 500+ Kenyan businesses hosted on our high-speed cloud.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-sky-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-sky-500 transition-colors shadow-lg shadow-sky-900/50">
+          Get Started
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Support
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

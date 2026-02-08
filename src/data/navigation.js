@@ -9,6 +9,7 @@ export const megaMenuData = [
           { name: "Smart School ERP", desc: "Admissions, Finance & Portals", icon: "🎓", href: "/solutions/smart-school", badge: "TOP" },
           { name: "Sacco Core Banking", desc: "SASRA Compliant Banking", icon: "🏦", href: "/solutions/sacco-core" },
           { name: "Microfinance System", desc: "Credit-Only & Digital Lending", icon: "💰", href: "/solutions/microfinance", badge: "NEW" },
+          { name: "Church Management", desc: "Member Database & Tithes", icon: "⛪", href: "/solutions/church" },
           { name: "MediFlow Hospital", desc: "Patient Records & Billing", icon: "🏥", href: "/solutions/hospital" }
         ]
       },

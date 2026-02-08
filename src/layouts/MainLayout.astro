@@ -174,27 +174,102 @@ const { title } = Astro.props;
             <ul class="space-y-4 text-slate-400 text-sm">
               <li><a href="/solutions/taxi-app" class="hover:text-blue-400 transition-colors">Taxi/Uber App</a></li>
               <li><a href="/solutions/food-delivery" class="hover:text-blue-400 transition-colors">Food Delivery</a></li>
-              <li><a href="/solutions/logistics" class="hover:text-blue-400 transition-colors">Logistics</a></li>
+              <li><a href="/solutions/courier-app" class="hover:text-blue-400 transition-colors">Logistics</a></li>
               <li><a href="/solutions/courier-app" class="hover:text-blue-400 transition-colors">Courier System</a></li>
             </ul>
           </div>
 
-          <div class="lg:col-span-2">
-            <h4 class="font-bold text-white mb-6">Stay Updated</h4>
-            <p class="text-slate-400 text-sm mb-4">Get the latest updates on Kenya's tech landscape and our new modules.</p>
-            <form class="flex gap-2">
-              <input type="email" placeholder="Enter your email" class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 w-full" />
-              <button type="button" class="bg-blue-600 px-6 py-3 rounded-lg text-sm font-bold hover:bg-blue-500 transition-colors">Join</button>
-            </form>
-          </div>
+         <div class="lg:col-span-2">
+  <h4 class="font-bold text-white mb-6">Stay Updated</h4>
+  <p class="text-slate-400 text-sm mb-4">Get the latest updates on Kenya's tech landscape and our new modules.</p>
+  
+  <div id="newsletter-success" class="hidden mb-4 p-3 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-xs font-bold">
+    ✅ You're on the list!
+  </div>
+
+  <form id="newsletter-form" action="https://api.web3forms.com/submit" method="POST" class="flex gap-2 relative">
+    
+    <input type="hidden" name="access_key" value="5ccf7890-b960-4e71-9235-0a5915c33808">
+    
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+    <input type="hidden" name="subject" value="New Newsletter Subscriber">
+
+    <input 
+      type="email" 
+      name="email" 
+      required 
+      placeholder="Enter your email" 
+      class="bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 w-full placeholder-slate-500" 
+    />
+    
+    <button 
+      type="submit" 
+      id="newsletter-btn"
+      class="bg-blue-600 px-6 py-3 rounded-lg text-sm font-bold text-white hover:bg-blue-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      Join
+    </button>
+  </form>
+
+  <script is:inline>
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterBtn = document.getElementById('newsletter-btn');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Loading State
+        const originalText = newsletterBtn.innerText;
+        newsletterBtn.innerText = "...";
+        newsletterBtn.disabled = true;
+
+        const formData = new FormData(newsletterForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            if (response.status == 200) {
+                newsletterSuccess.classList.remove('hidden');
+                newsletterForm.reset();
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                  newsletterSuccess.classList.add('hidden');
+                }, 5000);
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Error sending message.");
+        })
+        .finally(() => {
+            newsletterBtn.innerText = originalText;
+            newsletterBtn.disabled = false;
+        });
+      });
+    }
+  </script>
+</div>
         </div>
 
         <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-slate-500 text-sm">© 2026 Talkin Technologies. All rights reserved.</p>
           <div class="flex gap-8 text-sm text-slate-500">
-            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" class="hover:text-white transition-colors">SLA</a>
+            <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" class="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/sla" class="hover:text-white transition-colors">SLA</a>
           </div>
         </div>
       </div>

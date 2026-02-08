@@ -1,0 +1,211 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Mobile App Development (Android & iOS)">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        Flutter Experts • Kotlin • Swift • React Native
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        World-Class Apps. <br />
+        <span class="text-gradient">Built in Nairobi.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        We don't just write code; we engineer experiences. From <strong>Fintech Wallets</strong> to <strong>Delivery Apps</strong>, we build high-performance mobile applications that scale.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#process" class="bg-slate-900 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-800 transition-all shadow-xl shadow-blue-900/20">
+          How We Work
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+          Start Project
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">Cross-Platform</div><div class="text-xs text-slate-500 uppercase font-bold">iOS & Android</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Offline First</div><div class="text-xs text-slate-500 uppercase font-bold">Works w/o Bundles</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">M-Pesa SDK</div><div class="text-xs text-slate-500 uppercase font-bold">Native Payment</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">60 FPS</div><div class="text-xs text-slate-500 uppercase font-bold">Smooth UI</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#tech" class="hover:text-blue-600 transition-colors">Our Tech Stack</a>
+      <a href="#features" class="hover:text-blue-600 transition-colors">Key Features</a>
+      <a href="#process" class="hover:text-blue-600 transition-colors">Development Process</a>
+      <a href="#portfolio" class="hover:text-blue-600 transition-colors">Recent Work</a>
+    </div>
+  </div>
+
+  <section id="tech" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">The Right Tools for the Job</h2>
+      <p class="text-slate-500 text-lg">We choose the technology that fits your budget and performance needs.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100 text-left">
+        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-3xl mb-4">💙</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Flutter (Google)</h3>
+        <p class="text-sm text-slate-600 mb-4">Best for 90% of projects. One codebase runs on Android and iOS. Native performance at half the cost.</p>
+        <div class="flex gap-2 text-xs font-bold text-blue-700">
+           <span class="bg-white px-2 py-1 rounded">Fast Dev</span>
+           <span class="bg-white px-2 py-1 rounded">Beautiful UI</span>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 text-left">
+        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-3xl mb-4">⚙️</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Native (Kotlin/Swift)</h3>
+        <p class="text-sm text-slate-600 mb-4">For heavy banking apps or IoT integration where direct hardware access is critical.</p>
+        <div class="flex gap-2 text-xs font-bold text-slate-700">
+           <span class="bg-white px-2 py-1 rounded">Max Performance</span>
+           <span class="bg-white px-2 py-1 rounded">Bank Grade</span>
+        </div>
+      </div>
+
+      <div class="bg-indigo-50 p-8 rounded-3xl border border-indigo-100 text-left">
+        <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-3xl mb-4">⚛️</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">React Native</h3>
+        <p class="text-sm text-slate-600 mb-4">Perfect if you already have a React web team. Share logic between your website and app.</p>
+        <div class="flex gap-2 text-xs font-bold text-indigo-700">
+           <span class="bg-white px-2 py-1 rounded">JS Based</span>
+           <span class="bg-white px-2 py-1 rounded">Large Community</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-white mb-6">Built for the African User</h2>
+        <p class="text-slate-400 mb-8 text-lg">
+          We understand the local context. Slow internet, low-end devices, and M-Pesa dominance.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📶</div>
+             <div>
+               <h4 class="font-bold text-white text-lg">Offline-First Architecture</h4>
+               <p class="text-sm text-slate-400">Apps store data locally (SQLite/Hive). Users can work without bundles, and data syncs when internet returns.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📱</div>
+             <div>
+               <h4 class="font-bold text-white text-lg">Optimized for Low-End Phones</h4>
+               <p class="text-sm text-slate-400">We keep APK sizes small (under 15MB) and optimize RAM usage for budget Android devices (Tecno/Infinix).</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-xl flex-shrink-0">💳</div>
+             <div>
+               <h4 class="font-bold text-white text-lg">Native M-Pesa STK Push</h4>
+               <p class="text-sm text-slate-400">No redirects to browser. The M-Pesa PIN prompt pops up directly over the app for higher conversion.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center">
+         <div class="w-[300px] h-[600px] bg-black rounded-[3rem] border-[8px] border-slate-800 shadow-2xl relative overflow-hidden">
+             <div class="absolute inset-0 bg-slate-100 flex flex-col items-center justify-center">
+                 <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mb-6 animate-bounce">
+                    <span class="text-4xl text-white">✓</span>
+                 </div>
+                 <h3 class="text-slate-900 font-bold text-xl mb-2">Payment Successful</h3>
+                 <p class="text-slate-500 text-sm mb-8">KES 500 received via M-Pesa.</p>
+                 
+                 <div class="absolute bottom-10 left-4 right-4 bg-slate-800 text-white p-3 rounded-lg text-xs shadow-lg flex justify-between items-center">
+                    <span>Syncing Data...</span>
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                 </div>
+             </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="process" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">From Idea to Play Store</h2>
+      <p class="text-slate-500 text-lg">Our 4-step agile process ensures transparency.</p>
+    </div>
+
+    <div class="relative max-w-[1000px] mx-auto">
+       <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -z-10 -translate-y-1/2"></div>
+       
+       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+             <div class="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">1</div>
+             <h4 class="font-bold text-slate-900 mb-2">Discovery</h4>
+             <p class="text-xs text-slate-500">We sit down to understand your business logic, user flow, and monetization strategy.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+             <div class="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">2</div>
+             <h4 class="font-bold text-slate-900 mb-2">UI/UX Design</h4>
+             <p class="text-xs text-slate-500">We create clickable Figma prototypes. You see exactly how the app looks before we code.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+             <div class="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">3</div>
+             <h4 class="font-bold text-slate-900 mb-2">Development</h4>
+             <p class="text-xs text-slate-500">Agile sprints. You get a testable APK every 2 weeks to give feedback.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+             <div class="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">4</div>
+             <h4 class="font-bold text-slate-900 mb-2">Launch</h4>
+             <p class="text-xs text-slate-500">We handle Google Play Store and Apple App Store submission and rejection handling.</p>
+          </div>
+       </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Got an App Idea?</h2>
+      <p class="text-xl text-slate-400 mb-12">Let's turn it into a reality. Book a free technical consultation.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/50">
+          Book Consultation
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

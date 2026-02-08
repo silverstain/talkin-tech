@@ -1,0 +1,308 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Church Management System">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #7e22ce, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
+        Member Database • M-Pesa Tithes • Event Check-in
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        Digitize your <br />
+        <span class="text-gradient">Ministry Operations.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        Focus on the ministry, let us handle the administration. Manage your **Congregation**, track **Tithes & Pledges**, and automate **Communication** from a single dashboard.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#members" class="bg-purple-800 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-purple-700 transition-all shadow-xl shadow-purple-900/20">
+          View Features
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+          Request Demo
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">Database</div><div class="text-xs text-slate-500 uppercase font-bold">Families & Individuals</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Finance</div><div class="text-xs text-slate-500 uppercase font-bold">Tithes & Offerings</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">SMS</div><div class="text-xs text-slate-500 uppercase font-bold">Bulk Messaging</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Check-In</div><div class="text-xs text-slate-500 uppercase font-bold">Kids Church Safety</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#members" class="hover:text-purple-700 transition-colors">Membership</a>
+      <a href="#finance" class="hover:text-purple-700 transition-colors">Tithes & Giving</a>
+      <a href="#groups" class="hover:text-purple-700 transition-colors">Home Cells</a>
+      <a href="#events" class="hover:text-purple-700 transition-colors">Events</a>
+    </div>
+  </div>
+
+  <section id="members" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-2xl mb-6">👥</div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Know Your Flock</h2>
+        <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+          Move beyond spreadsheets. Keep detailed records of every member, their family tree, baptism status, and volunteer skills.
+        </p>
+        
+        <div class="space-y-6">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-purple-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Family Grouping</strong>
+                <p class="text-sm text-slate-500">Link parents and children. Track anniversaries and birthdays for automated wishes.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-purple-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Sacraments Tracker</strong>
+                <p class="text-sm text-slate-500">Record dates for Baptism, Confirmation, and Marriage.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-purple-700 border border-slate-200">✓</span>
+              <div>
+                <strong class="text-slate-900 text-sm">Visitor Follow-up</strong>
+                <p class="text-sm text-slate-500">Automated "Thank you for visiting" SMS flow for first-time guests.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="bg-slate-900 rounded-2xl p-3 shadow-2xl">
+           <div class="bg-white rounded-xl p-8 border border-slate-200 relative overflow-hidden">
+              <div class="flex justify-between items-start mb-6 border-b border-slate-100 pb-4">
+                 <div class="flex gap-4">
+                    <div class="w-16 h-16 bg-slate-200 rounded-full border-2 border-white shadow-sm overflow-hidden">
+                       <div class="w-full h-full flex items-center justify-center text-2xl">👨‍💼</div>
+                    </div>
+                    <div>
+                       <div class="text-xl font-bold text-slate-900">Johnathan Doe</div>
+                       <div class="text-xs text-slate-500">Member ID: MEM-0042 • Since 2018</div>
+                       <div class="mt-1 inline-flex items-center gap-1 bg-green-100 text-green-700 px-2 py-0.5 rounded text-[10px] font-bold">
+                          Active Member
+                       </div>
+                    </div>
+                 </div>
+                 <div class="text-right">
+                    <button class="bg-purple-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm">Edit Profile</button>
+                 </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                 <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Home Cell</div>
+                    <div class="text-sm font-bold text-slate-900">Westlands Zone A</div>
+                 </div>
+                 <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Ministry</div>
+                    <div class="text-sm font-bold text-slate-900">Choir (Tenor)</div>
+                 </div>
+              </div>
+
+              <div class="text-xs font-bold text-slate-400 uppercase mb-2">Family Members</div>
+              <div class="flex gap-2">
+                 <div class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-bold border border-purple-100">Sarah (Spouse)</div>
+                 <div class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-bold border border-purple-100">Timmy (Child)</div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="finance" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl">
+         <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl font-bold">💳</div>
+            <div>
+               <h3 class="font-bold text-slate-900 text-lg">Sunday Giving</h3>
+               <p class="text-xs text-slate-500 font-bold">Live M-Pesa Feed</p>
+            </div>
+         </div>
+         
+         <div class="space-y-3">
+            <div class="flex justify-between items-center bg-slate-50 p-3 rounded-xl border border-slate-100">
+               <div>
+                  <div class="font-bold text-sm text-slate-900">M-Pesa: QKH8...921</div>
+                  <div class="text-xs text-slate-500">Alice Kamau • Tithe</div>
+               </div>
+               <div class="text-right">
+                  <div class="font-bold text-green-600">+ KES 5,000</div>
+                  <div class="text-[10px] text-slate-400">Just Now</div>
+               </div>
+            </div>
+            <div class="flex justify-between items-center bg-slate-50 p-3 rounded-xl border border-slate-100">
+               <div>
+                  <div class="font-bold text-sm text-slate-900">M-Pesa: QKH8...112</div>
+                  <div class="text-xs text-slate-500">Anonymous • Building Fund</div>
+               </div>
+               <div class="text-right">
+                  <div class="font-bold text-green-600">+ KES 10,000</div>
+                  <div class="text-[10px] text-slate-400">2 mins ago</div>
+               </div>
+            </div>
+         </div>
+
+         <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-end">
+            <div>
+               <div class="text-xs text-slate-400 uppercase font-bold">Total Collected</div>
+               <div class="text-2xl font-bold text-slate-900">KES 452,100</div>
+            </div>
+            <button class="bg-slate-900 text-white text-xs px-3 py-2 rounded-lg font-bold">Print Report</button>
+         </div>
+      </div>
+
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Transparent Financials</h2>
+        <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+          Automate the counting process. Integrate your Paybill number to automatically record Tithes, Offerings, and Project Pledges against specific members.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">📱</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">M-Pesa Auto-Reconciliation</h4>
+               <p class="text-sm text-slate-500">System detects the sender's phone number and automatically assigns the Tithe to their member profile.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">📜</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Digital Receipts</h4>
+               <p class="text-sm text-slate-500">Automatically send an SMS receipt: "Dear John, we received your Tithe of KES 5,000. God Bless."</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🏗️</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Pledge Management</h4>
+               <p class="text-sm text-slate-500">Track pledges for building projects. Send gentle reminders to members with outstanding pledges.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="groups" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-white mb-4">Community & Communication</h2>
+      <p class="text-slate-400 text-lg">Keep the church connected beyond Sunday service.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">🏠</div>
+        <h3 class="font-bold text-xl text-white mb-2">Home Cells / Zones</h3>
+        <p class="text-sm text-slate-400">Map members to geographical zones. Assign Cell Leaders and track weekly attendance statistics.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">📨</div>
+        <h3 class="font-bold text-xl text-white mb-2">Smart SMS Blasts</h3>
+        <p class="text-sm text-slate-400">Send targeted messages. E.g., "Choir practice moved to 6 PM" (Sent only to Choir group).</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-lg">
+        <div class="text-4xl mb-4">📅</div>
+        <h3 class="font-bold text-xl text-white mb-2">Duty Rota</h3>
+        <p class="text-sm text-slate-400">Schedule volunteers for Ushers, Media, and Sunday School. Send automated reminders on Saturday.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="py-24 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Events & Child Safety</h2>
+        <p class="text-slate-600 mb-8 text-lg">
+          Professionalize your conferences and ensure the safety of children during service.
+        </p>
+        
+        <div class="space-y-4">
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">Event Registration</h4>
+             <p class="text-sm text-slate-600">Create landing pages for conferences (e.g., "Men's Conference"). Accept payments and issue QR tickets.</p>
+           </div>
+           <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+             <h4 class="font-bold text-slate-900 mb-1">Kids Church Check-in</h4>
+             <p class="text-sm text-slate-600">Print name tags with unique parent codes. Ensure children are only released to the correct guardian.</p>
+           </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-lg">
+         <div class="bg-slate-900 text-white p-4 rounded-xl text-center mb-6">
+            <h4 class="font-bold">Sunday School Check-In</h4>
+            <div class="text-xs text-slate-400">09:30 AM Service</div>
+         </div>
+         
+         <div class="border-2 border-dashed border-slate-200 rounded-xl p-8 flex flex-col items-center justify-center text-center">
+            <div class="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center text-4xl mb-4">📸</div>
+            <p class="font-bold text-slate-900">Scan Family QR Code</p>
+            <p class="text-xs text-slate-500 mt-2">or enter Phone Number</p>
+         </div>
+
+         <div class="grid grid-cols-2 gap-4 mt-6">
+            <button class="bg-purple-600 text-white py-3 rounded-xl font-bold text-sm">Check In</button>
+            <button class="bg-white border border-slate-200 text-slate-600 py-3 rounded-xl font-bold text-sm">Register Guest</button>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Empower your Ministry.</h2>
+      <p class="text-xl text-slate-400 mb-12">Organize the church so you can focus on the mission.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-purple-500 transition-colors shadow-lg shadow-purple-900/50">
+          Request Demo
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

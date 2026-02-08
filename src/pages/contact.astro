@@ -1,5 +1,10 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+
+// You will need an Access Key. 
+// 1. Go to https://web3forms.com/
+// 2. Enter your email (hello@talkintech.co.ke) to get a key.
+// 3. Paste it in the hidden input below.
 ---
 
 <MainLayout title="Contact Sales">
@@ -57,7 +62,7 @@ import MainLayout from '../layouts/MainLayout.astro';
             <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl group-hover:bg-blue-600 transition-colors">📞</div>
             <div>
               <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Direct Line</div>
-              <div class="text-lg font-bold">+254 700 000 000</div>
+              <div class="text-lg font-bold">+254 715 235 119</div>
             </div>
           </div>
 
@@ -65,7 +70,7 @@ import MainLayout from '../layouts/MainLayout.astro';
             <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-xl group-hover:bg-blue-600 transition-colors">📧</div>
             <div>
               <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">Email</div>
-              <div class="text-lg font-bold">hello@talkintech.com</div>
+              <div class="text-lg font-bold">hello@talkintech.co.ke</div>
             </div>
           </div>
         </div>
@@ -81,27 +86,36 @@ import MainLayout from '../layouts/MainLayout.astro';
       <div class="lg:w-[55%] p-12 lg:p-16 bg-white relative">
         <h3 class="text-2xl font-bold text-slate-900 mb-8">Start a Project</h3>
         
-        <form class="space-y-6">
+        <div id="result" class="hidden mb-4 p-4 rounded-lg text-sm font-bold"></div>
+
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+          
+          <input type="hidden" name="access_key" value="5ccf7890-b960-4e71-9235-0a5915c33808">
+          
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <input type="hidden" name="subject" value="New Lead from Talkin Tech Website">
+
           <div class="grid md:grid-cols-2 gap-6">
             <div class="space-y-2">
               <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">First Name</label>
-              <input type="text" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="John" />
+              <input type="text" name="first_name" required class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="John" />
             </div>
             <div class="space-y-2">
               <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Last Name</label>
-              <input type="text" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="Doe" />
+              <input type="text" name="last_name" required class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="Doe" />
             </div>
           </div>
 
           <div class="space-y-2">
             <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Work Email</label>
-            <input type="email" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="john@company.com" />
+            <input type="email" name="email" required class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg" placeholder="john@company.com" />
           </div>
 
           <div class="grid md:grid-cols-2 gap-6">
             <div class="space-y-2">
               <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">I am interested in</label>
-              <select class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg cursor-pointer">
+              <select name="service" required class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg cursor-pointer">
                 <option value="" disabled selected>Select a Product...</option>
                 <option value="sacco">Sacco Core Banking</option>
                 <option value="taxi">Taxi / Logistics App</option>
@@ -113,7 +127,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
             <div class="space-y-2">
               <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Project Budget</label>
-              <select class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg cursor-pointer">
+              <select name="budget" required class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg cursor-pointer">
                 <option value="" disabled selected>Select Range...</option>
                 <option value="s">KES 100k - 500k</option>
                 <option value="m">KES 500k - 2M</option>
@@ -125,16 +139,74 @@ import MainLayout from '../layouts/MainLayout.astro';
 
           <div class="space-y-2">
             <label class="text-xs font-bold text-slate-500 uppercase tracking-widest">Project Details</label>
-            <textarea rows="3" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg resize-none" placeholder="Tell us about your requirements..."></textarea>
+            <textarea name="message" required rows="3" class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:outline-none focus:border-blue-600 focus:bg-blue-50/30 transition-all font-medium text-slate-900 rounded-t-lg resize-none" placeholder="Tell us about your requirements..."></textarea>
           </div>
 
-          <button type="button" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 active:scale-95 flex items-center justify-center gap-2 mt-4">
-            <span>🚀</span> Send Inquiry
+          <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 active:scale-95 flex items-center justify-center gap-2 mt-4">
+            <span id="btnIcon">🚀</span> <span id="btnText">Send Inquiry</span>
           </button>
         </form>
       </div>
 
     </div>
   </section>
+
+  <script is:inline>
+    const form = document.getElementById('contactForm');
+    const result = document.getElementById('result');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      // Loading State
+      btnText.innerText = "Sending...";
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+      fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
+          body: json
+      })
+      .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+              result.classList.remove('hidden');
+              result.classList.add('bg-green-100', 'text-green-700');
+              result.innerHTML = "✅ Message sent! We will contact you shortly.";
+              form.reset();
+          } else {
+              console.log(response);
+              result.classList.remove('hidden');
+              result.classList.add('bg-red-100', 'text-red-700');
+              result.innerHTML = json.message || "Something went wrong.";
+          }
+      })
+      .catch(error => {
+          console.log(error);
+          result.classList.remove('hidden');
+          result.classList.add('bg-red-100', 'text-red-700');
+          result.innerHTML = "Something went wrong!";
+      })
+      .then(function() {
+          // Reset Button
+          form.reset();
+          btnText.innerText = "Send Inquiry";
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+          setTimeout(() => {
+              result.classList.add('hidden');
+          }, 5000);
+      });
+    });
+  </script>
 
 </MainLayout>

@@ -1,0 +1,82 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Service Level Agreement (SLA)">
+  <section class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-slate-900 mb-2">Service Level Agreement</h1>
+    <p class="text-slate-500 mb-10">Commitment to Reliability and Support.</p>
+
+    <div class="prose prose-slate max-w-none">
+      <h3>1. Service Uptime Guarantee</h3>
+      <p>
+        Talkin Technologies guarantees a Monthly Uptime Percentage of at least <strong>99.9%</strong> for our Cloud Hosted Services (Sacco Core, Smart School, MediFlow).
+      </p>
+      <p>
+        If we fall below this threshold, you are eligible for a Service Credit on your next invoice:
+      </p>
+      <table class="w-full text-left border-collapse my-4">
+        <thead>
+          <tr class="border-b border-slate-200">
+            <th class="py-2">Monthly Uptime</th>
+            <th class="py-2">Service Credit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-slate-100">
+            <td class="py-2">99.0% - 99.8%</td>
+            <td class="py-2">10% Credit</td>
+          </tr>
+          <tr class="border-b border-slate-100">
+            <td class="py-2">95.0% - 98.9%</td>
+            <td class="py-2">25% Credit</td>
+          </tr>
+          <tr>
+            <td class="py-2">&lt; 95.0%</td>
+            <td class="py-2">50% Credit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2. Support Response Times</h3>
+      <p>
+        We prioritize support tickets based on severity. Our support hours are 8:00 AM to 5:00 PM EAT (Monday - Friday). Critical issues are monitored 24/7.
+      </p>
+      
+      <div class="space-y-4 my-6">
+        <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+          <strong class="text-red-700">Severity 1: Critical (System Down)</strong>
+          <p class="text-sm text-slate-600 m-0">Complete loss of service. No workaround available.</p>
+          <p class="text-xs font-bold mt-1">Response Time: &lt; 1 Hour (24/7)</p>
+        </div>
+
+        <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+          <strong class="text-orange-700">Severity 2: High (Major Feature Broken)</strong>
+          <p class="text-sm text-slate-600 m-0">System is live but major functions (e.g., M-Pesa deposits) are failing.</p>
+          <p class="text-xs font-bold mt-1">Response Time: &lt; 4 Hours</p>
+        </div>
+
+        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+          <strong class="text-blue-700">Severity 3: Normal (Minor Issues)</strong>
+          <p class="text-sm text-slate-600 m-0">Bugs that do not stop operations. General questions.</p>
+          <p class="text-xs font-bold mt-1">Response Time: &lt; 24 Hours</p>
+        </div>
+      </div>
+
+      <h3>3. Scheduled Maintenance</h3>
+      <p>
+        We perform regular system updates to ensure security and performance. We will provide at least <strong>48 hours notice</strong> for scheduled maintenance, which will typically occur during off-peak hours (Sunday 2:00 AM - 5:00 AM EAT).
+      </p>
+
+      <h3>4. Exclusions</h3>
+      <p>
+        This SLA does not apply to downtime caused by:
+      </p>
+      <ul>
+        <li>Factors outside our control (e.g., Safaricom M-Pesa outages, Undersea cable cuts).</li>
+        <li>Client's own internet connectivity issues.</li>
+        <li>Suspension of service due to non-payment.</li>
+      </ul>
+    </div>
+  </section>
+</MainLayout>

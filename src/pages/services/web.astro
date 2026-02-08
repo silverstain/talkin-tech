@@ -1,0 +1,253 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Custom Web Application Development">
+
+  <style>
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #06b6d4, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+    
+    html { scroll-padding-top: 100px; }
+  </style>
+
+  <section class="pt-40 pb-20 px-6 bg-slate-50 bg-grid border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto text-center relative z-10">
+      
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-[12px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+        Laravel • React • Livewire • Node.js
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+        Scalable Enterprise <br />
+        <span class="text-gradient">Web Systems.</span>
+      </h1>
+      
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-4xl mx-auto font-medium">
+        We build complex web applications, not just simple websites. From **Custom ERPs** and **SaaS Platforms** to **Customer Portals** that automate your business logic.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+        <a href="#technologies" class="bg-slate-900 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-800 transition-all shadow-xl shadow-cyan-900/20">
+          View Tech Stack
+        </a>
+        <a href="/contact" class="bg-white text-slate-900 border-2 border-slate-900 px-10 py-5 rounded-xl font-bold text-lg hover:bg-slate-900 hover:text-white transition-all shadow-sm">
+          Start Project
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
+        <div><div class="font-bold text-slate-900 text-lg">PWA Ready</div><div class="text-xs text-slate-500 uppercase font-bold">Install on Desktop</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Secure</div><div class="text-xs text-slate-500 uppercase font-bold">Bank-Grade Logic</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Fast</div><div class="text-xs text-slate-500 uppercase font-bold">Optimized Queries</div></div>
+        <div><div class="font-bold text-slate-900 text-lg">Scalable</div><div class="text-xs text-slate-500 uppercase font-bold">Cloud Native</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white/95 backdrop-blur-md border-y border-slate-200 py-4 hidden md:block shadow-sm">
+    <div class="max-w-[1400px] mx-auto px-6 flex justify-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+      <a href="#technologies" class="hover:text-cyan-600 transition-colors">Technology</a>
+      <a href="#types" class="hover:text-cyan-600 transition-colors">What We Build</a>
+      <a href="#performance" class="hover:text-cyan-600 transition-colors">Performance</a>
+      <a href="#integrations" class="hover:text-cyan-600 transition-colors">Integrations</a>
+    </div>
+  </div>
+
+  <section id="technologies" class="py-24 px-6 bg-white border-b border-slate-100">
+    <div class="max-w-[1200px] mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Our Engineering Stack</h2>
+      <p class="text-slate-500 text-lg">We use modern, robust frameworks to ensure your system lasts for years.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+      <div class="bg-red-50 p-8 rounded-3xl border border-red-100 text-left hover:border-red-300 transition-all">
+        <div class="text-4xl mb-4">🔴</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">Laravel & PHP</h3>
+        <p class="text-sm text-slate-600 mb-4">Our backend of choice for complex logic, secure authentication, and heavy data processing. Stable and reliable.</p>
+        <div class="text-xs font-bold text-red-700 uppercase tracking-wide">Best For: ERPs, APIs, SaaS</div>
+      </div>
+
+      <div class="bg-cyan-50 p-8 rounded-3xl border border-cyan-100 text-left hover:border-cyan-300 transition-all">
+        <div class="text-4xl mb-4">⚛️</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">React.js & Next.js</h3>
+        <p class="text-sm text-slate-600 mb-4">For interactive, lightning-fast frontends. We build Single Page Applications (SPAs) that feel like mobile apps.</p>
+        <div class="text-xs font-bold text-cyan-700 uppercase tracking-wide">Best For: Dashboards, Portals</div>
+      </div>
+
+      <div class="bg-indigo-50 p-8 rounded-3xl border border-indigo-100 text-left hover:border-indigo-300 transition-all">
+        <div class="text-4xl mb-4">🗄️</div>
+        <h3 class="font-bold text-xl text-slate-900 mb-2">MySQL & PostgreSQL</h3>
+        <p class="text-sm text-slate-600 mb-4">We design optimized database schemas that can handle millions of records without slowing down.</p>
+        <div class="text-xs font-bold text-indigo-700 uppercase tracking-wide">Best For: Data Integrity</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="types" class="py-24 px-6 bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div>
+        <h2 class="text-3xl font-bold text-white mb-6">Complex Systems Made Simple</h2>
+        <p class="text-slate-400 mb-8 text-lg">
+          We specialize in automating manual business processes. If you are using Excel to run your company, we can build a system to replace it.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📊</div>
+             <div>
+               <h4 class="font-bold text-white text-lg">Custom ERPs</h4>
+               <p class="text-sm text-slate-400">Tailor-made Enterprise Resource Planning systems. Inventory, HR, Finance, and CRM all in one place.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🖥️</div>
+             <div>
+               <h4 class="font-bold text-white text-lg">SaaS Products</h4>
+               <p class="text-sm text-slate-400">Have an idea for a subscription service? We build multi-tenant architectures that scale.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🌐</div>
+             <div>
+               <h4 class="font-bold text-white text-lg">Customer Portals</h4>
+               <p class="text-sm text-slate-400">Allow your clients to log in, view invoices, track orders, and submit support tickets.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center">
+         <div class="w-full max-w-lg bg-slate-800 rounded-xl p-2 shadow-2xl border border-slate-700">
+             <div class="bg-slate-900 aspect-video rounded-lg overflow-hidden relative border border-slate-700">
+                 <div class="flex h-full">
+                     <div class="w-16 bg-slate-800 border-r border-slate-700 flex flex-col items-center py-4 gap-4">
+                         <div class="w-8 h-8 bg-cyan-500 rounded-lg"></div>
+                         <div class="w-8 h-8 bg-slate-700 rounded-lg"></div>
+                         <div class="w-8 h-8 bg-slate-700 rounded-lg"></div>
+                         <div class="w-8 h-8 bg-slate-700 rounded-lg"></div>
+                     </div>
+                     <div class="flex-1 p-4">
+                         <div class="flex justify-between mb-4">
+                             <div class="h-6 w-32 bg-slate-700 rounded"></div>
+                             <div class="h-6 w-8 bg-slate-700 rounded-full"></div>
+                         </div>
+                         <div class="grid grid-cols-3 gap-4 mb-4">
+                             <div class="h-20 bg-slate-800 rounded border border-slate-700"></div>
+                             <div class="h-20 bg-slate-800 rounded border border-slate-700"></div>
+                             <div class="h-20 bg-slate-800 rounded border border-slate-700"></div>
+                         </div>
+                         <div class="h-40 bg-slate-800 rounded border border-slate-700 flex items-end px-4 pb-4 gap-2">
+                             <div class="w-1/6 h-1/2 bg-cyan-900 rounded-t"></div>
+                             <div class="w-1/6 h-2/3 bg-cyan-800 rounded-t"></div>
+                             <div class="w-1/6 h-1/3 bg-cyan-700 rounded-t"></div>
+                             <div class="w-1/6 h-3/4 bg-cyan-600 rounded-t"></div>
+                             <div class="w-1/6 h-full bg-cyan-500 rounded-t"></div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="bg-slate-700 h-3 rounded-b-xl mx-auto mt-1 w-full relative">
+                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-slate-600 rounded-b"></div>
+             </div>
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="performance" class="py-24 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="order-2 lg:order-1 bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
+         <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl font-bold">🚀</div>
+            <div>
+               <h3 class="font-bold text-slate-900 text-lg">Google Lighthouse Score</h3>
+               <p class="text-xs text-slate-500 font-bold">Real-time Performance Metrics</p>
+            </div>
+         </div>
+         
+         <div class="grid grid-cols-2 gap-4">
+            <div class="text-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+               <div class="text-3xl font-bold text-green-500 mb-1">98</div>
+               <div class="text-xs text-slate-400 uppercase font-bold">Performance</div>
+            </div>
+            <div class="text-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+               <div class="text-3xl font-bold text-green-500 mb-1">100</div>
+               <div class="text-xs text-slate-400 uppercase font-bold">SEO</div>
+            </div>
+            <div class="text-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+               <div class="text-3xl font-bold text-green-500 mb-1">100</div>
+               <div class="text-xs text-slate-400 uppercase font-bold">Best Practices</div>
+            </div>
+            <div class="text-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+               <div class="text-3xl font-bold text-green-500 mb-1">100</div>
+               <div class="text-xs text-slate-400 uppercase font-bold">Accessibility</div>
+            </div>
+         </div>
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <h2 class="text-3xl font-bold text-slate-900 mb-6">Progressive Web Apps (PWA)</h2>
+        <p class="text-slate-600 mb-8 text-lg">
+          Why build a separate desktop app? We build PWAs that can be installed on your computer directly from the browser.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">📥</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Installable</h4>
+               <p class="text-sm text-slate-500">Users can add your web system to their home screen or desktop dock. It works just like a native app.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">⚡</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Offline Capabilities</h4>
+               <p class="text-sm text-slate-500">Service workers cache data so your team can keep working even if the internet flickers.</p>
+             </div>
+          </div>
+          <div class="flex gap-4">
+             <div class="w-12 h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-xl flex-shrink-0 shadow-sm">🔔</div>
+             <div>
+               <h4 class="font-bold text-slate-900 text-lg">Push Notifications</h4>
+               <p class="text-sm text-slate-500">Send alerts to your users' browsers, just like mobile notifications.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-24 px-6 bg-slate-950 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Ready to digitize?</h2>
+      <p class="text-xl text-slate-400 mb-12">Move from spreadsheets to a custom web system designed for your business.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact" class="bg-cyan-500 text-slate-950 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-400 transition-colors shadow-lg shadow-cyan-500/20">
+          Start Project
+        </a>
+        <a href="https://wa.me/254715235119" class="text-white border-2 border-white/20 px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+          WhatsApp Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
